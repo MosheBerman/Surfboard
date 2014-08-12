@@ -4,7 +4,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SRFSurfboardPanelCell">
+            <connections>
+                <outlet property="actionButton" destination="zoD-pz-jIF" id="RnH-m8-4lB"/>
+                <outlet property="imageView" destination="lIo-6o-ySb" id="Tak-2U-C97"/>
+                <outlet property="textView" destination="Swu-Pg-BxP" id="kRp-Z5-eqI"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tsu-gU-dum" customClass="SRFSurfboardPanelCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -13,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Surfboard is drop in library for easy-to-build, amazing-to-use onboarding experiences on iOS." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swu-Pg-BxP">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Surfboard is drop in library for onboarding experiences on iOS." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swu-Pg-BxP">
                         <rect key="frame" x="10" y="18" width="300" height="100"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
