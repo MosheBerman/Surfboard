@@ -124,6 +124,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      */
     
     self.collectionView.pagingEnabled = YES;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.showsVerticalScrollIndicator = NO;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -146,19 +148,10 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 {
     SRFSurfboardPanelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSurfboardPanelIdentifier forIndexPath:indexPath];
     
-    //  TODO: Apply panel contents here.
-    
-    if (indexPath.row > 0 && indexPath.row < self.panels.count)
+    if (indexPath.row >= 0 && indexPath.row < self.panels.count)
     {
         SRFSurfboardPanel *panel = self.panels[indexPath.row];
-        
-        cell.textView.text = panel.text;
-        cell.imageView.image = panel.image;
-        
-        [cell.actionButton setTitle:panel.buttonTitle forState:UIControlStateNormal];
-
-        //  Hide the button on panels with no title.
-        cell.actionButton.hidden = (panel.buttonTitle == nil);
+        cell.panel = panel;
     }
     
     return cell;
@@ -202,7 +195,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 - (void)setPanels:(NSArray *)panels
 {
     _panels = panels;
-    [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self collectionViewLayout] invalidateLayout];
+        [[self collectionView] reloadData];
+    });
 }
 
 
@@ -243,6 +240,13 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     }
     
     return panels;
+}
+
+#pragma mark - 
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self.collectionView setCollectionViewLayout:self.collectionView.collectionViewLayout];
 }
 
 @end
