@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SRFSurfboardViewController.h"
 
 @interface ViewController ()
 
@@ -24,4 +25,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    return [super shouldPerformSegueWithIdentifier:identifier sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SRFSurfboardViewController *surfboard = segue.destinationViewController;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"panels" ofType:@"json"];
+    NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
+    [surfboard setPanels:panels];
+    
+    surfboard.collectionView.backgroundColor = self.view.backgroundColor;
+}
 @end
