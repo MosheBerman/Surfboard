@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D5BD5DA1-72E7-4A86-8A92-4FE1C9F1C35F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Surfboard</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>40FF93D2-C60A-47B7-8811-5442F519F47C</key>
+		<string>https://github.com/MosheBerman/Sufboard.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Surfboard.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>40FF93D2-C60A-47B7-8811-5442F519F47C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MosheBerman/Sufboard.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>40FF93D2-C60A-47B7-8811-5442F519F47C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>40FF93D2-C60A-47B7-8811-5442F519F47C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Surfboard</string>
+		</dict>
+	</array>
+</dict>
+</plist>

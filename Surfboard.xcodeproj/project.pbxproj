@@ -13,6 +13,12 @@
 		462C108F1993E21600A36CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462C108D1993E21600A36CF8 /* Main.storyboard */; };
 		462C10911993E21600A36CF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462C10901993E21600A36CF8 /* Images.xcassets */; };
 		462C109D1993E21600A36CF8 /* SurfboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 462C109C1993E21600A36CF8 /* SurfboardTests.m */; };
+		46EFD6CB199B6CBE00467EC4 /* SRFSurfboardPanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6C0199B6CBE00467EC4 /* SRFSurfboardPanelCell.m */; };
+		46EFD6CC199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EFD6C1199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib */; };
+		46EFD6CD199B6CBE00467EC4 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6C4199B6CBE00467EC4 /* SRFSurfboardPanel.m */; };
+		46EFD6CE199B6CBE00467EC4 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = 46EFD6C6199B6CBE00467EC4 /* panels.json */; };
+		46EFD6CF199B6CBE00467EC4 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */; };
+		46EFD6D0199B6CBE00467EC4 /* Surfboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,15 @@
 		462C10961993E21600A36CF8 /* SurfboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		462C109B1993E21600A36CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462C109C1993E21600A36CF8 /* SurfboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfboardTests.m; sourceTree = "<group>"; };
+		46EFD6BF199B6CBE00467EC4 /* SRFSurfboardPanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanelCell.h; sourceTree = "<group>"; };
+		46EFD6C0199B6CBE00467EC4 /* SRFSurfboardPanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanelCell.m; sourceTree = "<group>"; };
+		46EFD6C1199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardPanelCell.xib; sourceTree = "<group>"; };
+		46EFD6C3199B6CBE00467EC4 /* SRFSurfboardPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanel.h; sourceTree = "<group>"; };
+		46EFD6C4199B6CBE00467EC4 /* SRFSurfboardPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanel.m; sourceTree = "<group>"; };
+		46EFD6C6199B6CBE00467EC4 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
+		46EFD6C8199B6CBE00467EC4 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
+		46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
+		46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Surfboard.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,7 @@
 				462C10881993E21600A36CF8 /* AppDelegate.m */,
 				462C108A1993E21600A36CF8 /* ViewController.h */,
 				462C108B1993E21600A36CF8 /* ViewController.m */,
+				46EFD6BC199B6CBE00467EC4 /* Surfboard */,
 				462C108D1993E21600A36CF8 /* Main.storyboard */,
 				462C10901993E21600A36CF8 /* Images.xcassets */,
 				462C10831993E21600A36CF8 /* Supporting Files */,
@@ -114,6 +130,62 @@
 				462C109B1993E21600A36CF8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46EFD6BC199B6CBE00467EC4 /* Surfboard */ = {
+			isa = PBXGroup;
+			children = (
+				46EFD6BD199B6CBE00467EC4 /* Panel Cells */,
+				46EFD6C2199B6CBE00467EC4 /* Panel Data Model */,
+				46EFD6C5199B6CBE00467EC4 /* Sample Data */,
+				46EFD6C7199B6CBE00467EC4 /* Surfboard View Controller */,
+				46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */,
+			);
+			path = Surfboard;
+			sourceTree = "<group>";
+		};
+		46EFD6BD199B6CBE00467EC4 /* Panel Cells */ = {
+			isa = PBXGroup;
+			children = (
+				46EFD6BE199B6CBE00467EC4 /* Default Cell */,
+			);
+			path = "Panel Cells";
+			sourceTree = "<group>";
+		};
+		46EFD6BE199B6CBE00467EC4 /* Default Cell */ = {
+			isa = PBXGroup;
+			children = (
+				46EFD6BF199B6CBE00467EC4 /* SRFSurfboardPanelCell.h */,
+				46EFD6C0199B6CBE00467EC4 /* SRFSurfboardPanelCell.m */,
+				46EFD6C1199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib */,
+			);
+			path = "Default Cell";
+			sourceTree = "<group>";
+		};
+		46EFD6C2199B6CBE00467EC4 /* Panel Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				46EFD6C3199B6CBE00467EC4 /* SRFSurfboardPanel.h */,
+				46EFD6C4199B6CBE00467EC4 /* SRFSurfboardPanel.m */,
+			);
+			path = "Panel Data Model";
+			sourceTree = "<group>";
+		};
+		46EFD6C5199B6CBE00467EC4 /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				46EFD6C6199B6CBE00467EC4 /* panels.json */,
+			);
+			path = "Sample Data";
+			sourceTree = "<group>";
+		};
+		46EFD6C7199B6CBE00467EC4 /* Surfboard View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46EFD6C8199B6CBE00467EC4 /* SRFSurfboardViewController.h */,
+				46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */,
+			);
+			path = "Surfboard View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +237,7 @@
 				TargetAttributes = {
 					462C107F1993E21600A36CF8 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = HK64RUWW3P;
 					};
 					462C10951993E21600A36CF8 = {
 						CreatedOnToolsVersion = 6.0;
@@ -196,8 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EFD6D0199B6CBE00467EC4 /* Surfboard.xcassets in Resources */,
 				462C108F1993E21600A36CF8 /* Main.storyboard in Resources */,
+				46EFD6CC199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib in Resources */,
 				462C10911993E21600A36CF8 /* Images.xcassets in Resources */,
+				46EFD6CE199B6CBE00467EC4 /* panels.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				462C108C1993E21600A36CF8 /* ViewController.m in Sources */,
+				46EFD6CB199B6CBE00467EC4 /* SRFSurfboardPanelCell.m in Sources */,
+				46EFD6CD199B6CBE00467EC4 /* SRFSurfboardPanel.m in Sources */,
+				46EFD6CF199B6CBE00467EC4 /* SRFSurfboardViewController.m in Sources */,
 				462C10891993E21600A36CF8 /* AppDelegate.m in Sources */,
 				462C10861993E21600A36CF8 /* main.m in Sources */,
 			);
@@ -334,9 +413,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Surfboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -345,9 +428,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Surfboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -404,6 +491,7 @@
 				462C10A21993E21600A36CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462C10A31993E21600A36CF8 /* Build configuration list for PBXNativeTarget "SurfboardTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +500,7 @@
 				462C10A51993E21600A36CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
