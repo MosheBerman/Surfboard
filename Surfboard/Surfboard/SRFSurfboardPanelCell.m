@@ -27,14 +27,9 @@
     return self;
 }
 
-- (void)setPanel:(SRFSurfboardPanel *)panel
+- (void)prepareForReuse
 {
-    _panel = panel;
-    
-    UIFont *font = self.textView.font;
     self.textView.text = self.panel.text;
-    self.textView.textColor = [UIColor whiteColor];
-    self.textView.font = font;
     
     self.imageView.image = self.panel.image;
     
@@ -42,6 +37,20 @@
     
     //  Hide the button on panels with no title.
     self.actionButton.hidden = (self.panel.buttonTitle == nil);
+}
+
+- (void)setPanel:(SRFSurfboardPanel *)panel
+{
+    _panel = panel;
+    
+    [self prepareForReuse];
+}
+
+- (void)layoutSubviews
+{
+    self.actionButton.layer.cornerRadius = 5.0f;
+    self.actionButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+
 }
 
 @end

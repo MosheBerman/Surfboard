@@ -56,12 +56,12 @@
             </view>
             <constraints>
                 <constraint firstItem="ePr-PG-0ND" firstAttribute="top" secondItem="dMc-RP-y9y" secondAttribute="bottom" constant="-3" id="6NZ-bs-smW"/>
+                <constraint firstItem="ePr-PG-0ND" firstAttribute="leading" secondItem="jFV-8K-XhM" secondAttribute="leading" constant="60" id="Tyd-aA-g7I"/>
                 <constraint firstAttribute="centerX" secondItem="dMc-RP-y9y" secondAttribute="centerX" constant="-2.5" id="U8h-oj-Yp6"/>
-                <constraint firstItem="ePr-PG-0ND" firstAttribute="centerX" secondItem="SQh-bK-ego" secondAttribute="centerX" id="bDy-zY-90X"/>
                 <constraint firstItem="ePr-PG-0ND" firstAttribute="centerY" secondItem="wiU-3x-Gg0" secondAttribute="centerY" constant="-0.5" id="cCQ-0h-T1l"/>
-                <constraint firstItem="dMc-RP-y9y" firstAttribute="centerX" secondItem="SQh-bK-ego" secondAttribute="centerX" constant="2.5" id="gXn-SR-Et2"/>
                 <constraint firstItem="ePr-PG-0ND" firstAttribute="trailing" secondItem="wiU-3x-Gg0" secondAttribute="trailing" constant="29" id="goo-ea-YZi"/>
                 <constraint firstItem="dMc-RP-y9y" firstAttribute="top" secondItem="jFV-8K-XhM" secondAttribute="top" constant="20" id="j8E-Ub-hD3"/>
+                <constraint firstAttribute="trailing" secondItem="SQh-bK-ego" secondAttribute="trailing" constant="10" id="wjf-h6-hUH"/>
                 <constraint firstAttribute="bottom" secondItem="SQh-bK-ego" secondAttribute="bottom" constant="20" id="x73-Na-3Uj"/>
             </constraints>
             <connections>
