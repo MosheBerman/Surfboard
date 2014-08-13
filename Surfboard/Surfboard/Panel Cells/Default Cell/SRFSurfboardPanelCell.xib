@@ -22,10 +22,10 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wiU-3x-Gg0">
-                        <rect key="frame" x="90" y="193" width="141" height="249"/>
+                        <rect key="frame" x="91" y="192" width="140" height="250"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="141" id="hzj-L2-Oiz"/>
-                            <constraint firstAttribute="height" constant="249" id="hzn-G9-Pin"/>
+                            <constraint firstAttribute="width" constant="140" id="hzj-L2-Oiz"/>
+                            <constraint firstAttribute="height" constant="250" id="hzn-G9-Pin"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQh-bK-ego">
