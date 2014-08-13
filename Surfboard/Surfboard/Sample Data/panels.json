@@ -1,7 +1,7 @@
 [
  {
  "text" : "Welcome to Surfboard.",
- "image" : "swipe"
+ "image" : "swipe",
  },
  {
  "text" : "Surfboard makes it delightfully easy to craft onboarding experiences.",
@@ -12,28 +12,12 @@
  "image" : "panels",
  },
  {
- "text" : "Each panel contain text, an image, and optionally, a button.",
- "image" : "panel-contents",
- },
- {
- "text" : "The contents of each panel are tinted to a color that you provide.",
- "image" : "tint",
- },
- {
- "text" : "When a user taps on the optional button, you recieve a delegate callback to handle it.",
- "image" : "delegate",
- },
- {
  "text" : "See the documentation on GitHub for more information.",
  "image" : "github",
  },
  {
  "text" : "If you like Surfboard give me a shoutout on Twitter.\nI'm @bermaniastudios.",
  "image" : "hashtag",
- },
- {
- "text" : "Thanks again for surfing!",
- "image" : "surfer",
- "button" : "I'm Done!"
+ "button" : "Thanks for Surfing!"
  }
 ]
