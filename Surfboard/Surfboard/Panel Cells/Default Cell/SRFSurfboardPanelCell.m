@@ -18,11 +18,25 @@
 
 @implementation SRFSurfboardPanelCell
 
+- (id)awakeAfterUsingCoder:(NSCoder *)aDecoder
+{
+    self = [super awakeAfterUsingCoder:aDecoder];
+    
+    if (self)
+    {
+        self.tintColor = [UIColor whiteColor];
+        
+        self.backgroundColor = [UIColor clearColor];
+    }
+    return self;
+}
+
+
 - (void)prepareForReuse
 {
     self.textView.text = self.panel.text;
     
-    self.imageView.image = self.panel.image;
+    self.imageView.image = [self.panel.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
     [self.actionButton setTitle:self.panel.buttonTitle forState:UIControlStateNormal];
     
@@ -41,7 +55,6 @@
 {
     self.actionButton.layer.cornerRadius = 5.0f;
     self.actionButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
-
 }
 
 @end
