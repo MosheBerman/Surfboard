@@ -64,9 +64,11 @@
     self.actionButton.layer.cornerRadius = 5.0f;
     self.actionButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
     
-    self.textView.textColor = [self tintColor];
+    self.textView.textColor = self.tintColor;
     
     self.deviceImage.image = [self.deviceImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    [self.actionButton setTitleColor:self.tintColor forState:UIControlStateNormal];
 }
 
 @end
