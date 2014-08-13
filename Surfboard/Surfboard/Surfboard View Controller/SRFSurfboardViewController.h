@@ -20,14 +20,24 @@
 
 @property (nonatomic, assign) id<SRFSurfboardDelegate> delegate;
 
-#pragma mark - Tint Color
+#pragma mark - Colors
 
 /** ---
- *  @name Tint Color
+ *  @name Color
  *  ---
  */
 
+/**
+ *  The tint color of the cells.
+ */
+
 @property (nonatomic, strong) UIColor *tintColor;
+
+/**
+ *  The background color of the view.
+ */
+
+@property (nonatomic, strong) UIColor *backgroundColor;
 
 #pragma mark - Initializers
 

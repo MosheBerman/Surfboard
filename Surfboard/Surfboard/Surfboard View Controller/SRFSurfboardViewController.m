@@ -98,6 +98,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
         _pageControl.numberOfPages = panels.count;
         _isRotating = NO;
         _tintColor = [UIColor whiteColor];
+        _backgroundColor = [UIColor blueColor];
     }
     
     return self;
@@ -127,10 +128,16 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [super viewDidLoad];
     
     /**
-     *
+     *  Apply the tint color to the cells.
      */
     
-    self.tintColor = [UIColor whiteColor];
+    self.tintColor = self.tintColor;
+    
+    /**
+     *  Apply a background color.
+     */
+    
+    self.collectionView.backgroundColor = self.backgroundColor;
     
     /**
      *  Configure the layout.
@@ -163,23 +170,21 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     self.collectionView.showsVerticalScrollIndicator = NO;
     
     /**
-     *  Add a page control
-     */
-    
-    [self _addPageControl];
-    
-    /**
      *  Debug borders Yay!
      */
     
     //    self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
     //    self.collectionView.layer.borderWidth = 2.0f;
-    
 }
 
-- (void)viewWillAppear:(BOOL)animated
+/**
+ *  Add a page control
+ */
+
+- (void)viewDidAppear:(BOOL)animated
 {
-    [self _positionPageControl];
+    [self _addPageControl];
+    [self _hackBorderOnPageControlSubviews];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -320,8 +325,6 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
     [[self collectionViewLayout] invalidateLayout];
     [[self collectionView] reloadData];
-    
-    [self _addPageControl];
 }
 
 /**
@@ -336,6 +339,15 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
     self.collectionView.tintColor = tintColor;
     [self.collectionView reloadData];
+}
+
+/**
+ *
+ */
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    self.collectionView.backgroundColor = backgroundColor;
 }
 
 #pragma mark - Load Panels from Configuration
@@ -468,9 +480,15 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
     [self.pageControl sizeToFit];
     
+    self.pageControl.alpha = 0.0f;
+    
     [self.collectionView addSubview:self.pageControl];
     
     [self _positionPageControl];
+    
+    [UIView animateWithDuration:0.15 animations:^{
+        self.pageControl.alpha = 1.0f;
+    }];
 }
 
 /**
@@ -621,4 +639,5 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
         [self.delegate surfboard:self didTapButtonAtIndexPath:button.indexPath];
     }
 }
+
 @end
