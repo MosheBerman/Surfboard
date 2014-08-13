@@ -28,7 +28,7 @@
  *  @return An SRFSurfboardViewController
  */
 
-- (instancetype)initWithPanels:(NSArray *)panels;
+- (instancetype)initWithPanels:(NSArray *)panels NS_DESIGNATED_INITIALIZER;
 
 #pragma mark - Setting the Panels After Initializing
 

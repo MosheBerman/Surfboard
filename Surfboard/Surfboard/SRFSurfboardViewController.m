@@ -20,7 +20,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
  *  An extension of the surfbord view controller.
  */
 
-@interface SRFSurfboardViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface SRFSurfboardViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 /**
  *  An array of configuration elements.
@@ -28,6 +28,17 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 @property (nonatomic, strong) NSArray *panels;
 
+/**
+ *  An index of the current view.
+ */
+
+@property (nonatomic, assign) NSInteger index;
+
+/**
+ *  A page control.
+ */
+
+@property (nonatomic, strong) UIPageControl *pageControl;
 @end
 
 @implementation SRFSurfboardViewController
@@ -75,6 +86,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     if (self)
     {
         _panels = panels;
+        _pageControl = [[UIPageControl alloc] init];
+        _pageControl.numberOfPages = panels.count;
     }
     
     return self;
@@ -82,7 +95,13 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    self = [self initWithPanels:nil];
+    
+    if (self)
+    {
+        
+    }
+    
     return self;
 }
 
@@ -126,6 +145,12 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     self.collectionView.pagingEnabled = YES;
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
+    
+    /**
+     *  Add a page control
+     */
+    
+    [self _addPageControl];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -152,6 +177,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     {
         SRFSurfboardPanel *panel = self.panels[indexPath.row];
         cell.panel = panel;
+
+        [self _adjustPageControlVisibilityForPanelAtIndex:indexPath.row];
     }
     
     return cell;
@@ -196,10 +223,10 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 {
     _panels = panels;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[self collectionViewLayout] invalidateLayout];
-        [[self collectionView] reloadData];
-    });
+    [[self collectionViewLayout] invalidateLayout];
+    [[self collectionView] reloadData];
+    
+    [self _addPageControl];
 }
 
 
@@ -242,7 +269,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     return panels;
 }
 
-#pragma mark - 
+#pragma mark - Rotation Handling
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
@@ -251,8 +278,182 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+    /**
+     *  Force the layout to redraw, which will resize the cells.
+     */
+    
     [self.collectionViewLayout invalidateLayout];
     
+    /**
+     *  Center the previously centered cell.
+     */
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.index inSection:0];
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    
+    /**
+     *  Update the page control.
+     */
+    [self _positionPageControl];
 }
 
+#pragma mark - UIScrollViewDelegate
+
+/**
+ *  Although we adjust the page control's 
+ *  alpha when dequeuing a cell, we need to
+ *  to so again after dragging, just in case 
+ *  there's a false start.
+ */
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
+}
+
+/**
+ *  Whenever the collection view scrolls, 
+ *  we need to update the page control.
+ */
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.index = [self _calculatedIndex];
+    [self _positionPageControl];
+    [self _selectActivePage];
+}
+
+#pragma mark - Page Control
+
+/**
+ *  This method sets the number of pages,
+ *  resizes the page control, positions
+ *  it, and finally, adds the page control
+ *  to the view hierarchy.
+ */
+
+- (void)_addPageControl
+{
+    self.pageControl.numberOfPages = self.panels.count;
+    
+    [self.pageControl sizeToFit];
+    
+    [self.collectionView addSubview:self.pageControl];
+    
+    [self _positionPageControl];
+}
+
+/**
+ *  This method calculates and sets the
+ *  current page of the page control.
+ */
+
+- (void)_selectActivePage
+{
+    self.pageControl.currentPage = self.index;
+}
+
+/**
+ *  This method calculate and sets
+ *  the position of the page control.
+ */
+
+- (void)_positionPageControl
+{
+    
+    if (![self.collectionView.subviews containsObject:self.pageControl])
+    {
+        
+        NSLog(@"(SRFSurfboard) : I can't layout the page control until it's in the view hierarchy.");
+        return;
+    }
+    
+    CGRect visibleRect = [self _visibleRect];
+    
+    CGFloat pageControlX = CGRectGetMidX(visibleRect);
+    CGFloat pageControlY = CGRectGetHeight(self.collectionView.bounds) - CGRectGetHeight(self.pageControl.frame);
+    
+    CGPoint center = CGPointMake(pageControlX, pageControlY);
+    
+    self.pageControl.center = center;
+}
+
+/**
+ *  Hides the page control if we think
+ *  that it will overlap a button.
+ */
+
+- (void)_adjustPageControlVisibilityForPanelAtIndex:(NSInteger)index
+{
+    
+    /**
+     *  Get a panel, if we have one at the current index.
+     */
+    
+    SRFSurfboardPanel *panel = nil;
+    
+    if (index >= 0 || index < self.panels.count)
+    {
+        panel = self.panels[index];
+    }
+    
+    /**
+     *  If there are one or more button titles,
+     *  we need to hide the page control, so
+     *  it doesn't overlap the cell.
+     *
+     *  Also, if we didn't get a panel in the 
+     *  previous step, we're going to simply 
+     *  hide the page control.
+     */
+    
+    if (panel.buttonTitle || panel == nil)
+    {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.pageControl.alpha = 0.0f;
+        }];
+    }
+    
+    /**
+     *  Otherwise, we want to ensure that the
+     *  page control is visible.
+     */
+    
+    else
+    {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.pageControl.alpha = 1.0f;
+        }];
+    }
+}
+#pragma mark - Scrolling Progress
+
+/** ---
+ *  @name Scrolling Progress
+ *  ---
+ */
+
+/**
+ *  Calculates the index based on the offset and the visible rect.
+ */
+
+- (NSInteger)_calculatedIndex
+{
+    CGFloat width = CGRectGetWidth(self.collectionView.bounds);
+    CGFloat offset = self.collectionView.contentOffset.x;
+    CGFloat index = offset/width;
+    return index;
+}
+
+/**
+ *  Calculates the visible rectangle of the collection view.
+ */
+
+- (CGRect)_visibleRect
+{
+    CGRect visibleRect =  CGRectZero;
+    visibleRect.size = self.collectionView.bounds.size;
+    visibleRect.origin = self.collectionView.contentOffset;
+    
+    return visibleRect;
+}
 @end
