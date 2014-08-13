@@ -151,6 +151,13 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      */
     
     [self _addPageControl];
+    
+    /**
+     *  Debug borders Yay!
+     */
+    
+//    self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
+//    self.collectionView.layer.borderWidth = 2.0f;
 }
 
 #pragma mark - UICollectionViewDataSource
