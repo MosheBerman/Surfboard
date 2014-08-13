@@ -95,6 +95,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     {
         _panels = panels;
         _pageControl = [[UIPageControl alloc] init];
+        _pageControl.userInteractionEnabled = NO;
+        _pageControl.defersCurrentPageDisplay = YES;
         _pageControl.numberOfPages = panels.count;
         _isRotating = NO;
         _tintColor = [UIColor whiteColor];
