@@ -9,6 +9,7 @@
 #import "SRFSurfboardViewController.h"
 #import "SRFSurfboardPanelCell.h"   //  the panel cell
 #import "SRFSurfboardPanel.h"
+#import "UIButton+IndexPath.h"
 
 /**
  *  An identifier for surfboard cells.
@@ -59,7 +60,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (instancetype)initWithPathToConfiguration:(NSString *)path
 {
-
+    
     NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
     
     self = [self initWithPanels:panels];
@@ -164,9 +165,9 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      *  Debug borders Yay!
      */
     
-//    self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
-//    self.collectionView.layer.borderWidth = 2.0f;
-
+    //    self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
+    //    self.collectionView.layer.borderWidth = 2.0f;
+    
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -193,13 +194,80 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     {
         SRFSurfboardPanel *panel = self.panels[indexPath.row];
         cell.panel = panel;
-
+        
+        [self _prepareButtonsInCell:cell atIndexPath:indexPath];
+        
         [self _adjustPageControlVisibilityForPanelAtIndex:indexPath.row];
     }
     
     return cell;
 }
 
+#pragma mark - Wire Up the Buttons
+
+- (void)_prepareButtonsInCell:(SRFSurfboardPanelCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    /**
+     *  We need to prepare the buttons in this cell.
+     */
+    
+    SRFSurfboardPanelCell *panelCell = (SRFSurfboardPanelCell *)cell;
+    
+    /**
+     *  Start with an index of zero.
+     */
+    
+    NSInteger buttonIndex = 0;
+    
+    if ([panelCell isKindOfClass:[SRFSurfboardPanelCell class]])
+    {
+        for (UIView *view in panelCell.contentView.subviews)
+        {
+            
+            /**
+             *  For each button, set the tag, then increment.
+             */
+            
+            if ([view isKindOfClass:[UIButton class]])
+            {
+                /**
+                 *  Grab the button.
+                 */
+                
+                UIButton *button = (UIButton *)view;
+                
+                if([button respondsToSelector:@selector(setIndexPath:)])
+                {
+                    /**
+                     *  The indexPath is added in class extension defined in the UIButton_Surfboard.h header.
+                     *  Here we set the indexPath based on the panel and the index.
+                     */
+                    
+                    button.indexPath = [NSIndexPath indexPathForRow:buttonIndex inSection:indexPath.row];
+                    
+                    /**
+                     *  Increment the buttonIndex.
+                     */
+                    
+                    buttonIndex++;
+                    
+                    /**
+                     *  Remove any old wiring from the button and wire it up again.
+                     */
+                    
+                    [button removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+                    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+                }
+                else
+                {
+                    NSLog(@"(SRFSurfboardViewController) : Failed to load UIButton extension. Buttons will not work.");
+                }
+            }
+        }
+        
+    }
+}
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 /** ---
@@ -315,9 +383,9 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 #pragma mark - UIScrollViewDelegate
 
 /**
- *  Although we adjust the page control's 
+ *  Although we adjust the page control's
  *  alpha when dequeuing a cell, we need to
- *  to so again after dragging, just in case 
+ *  to so again after dragging, just in case
  *  there's a false start.
  */
 
@@ -327,7 +395,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 }
 
 /**
- *  Whenever the collection view scrolls, 
+ *  Whenever the collection view scrolls,
  *  we need to update the page control.
  */
 
@@ -417,8 +485,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      *  we need to hide the page control, so
      *  it doesn't overlap the cell.
      *
-     *  Also, if we didn't get a panel in the 
-     *  previous step, we're going to simply 
+     *  Also, if we didn't get a panel in the
+     *  previous step, we're going to simply
      *  hide the page control.
      */
     
@@ -471,5 +539,24 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     visibleRect.origin = self.collectionView.contentOffset;
     
     return visibleRect;
+}
+
+#pragma mark - Button Delegate
+
+/** ---
+ *  @name Button Delegate
+ *  ---
+ */
+
+/**
+ *  Called when a button is tapped.
+ */
+
+- (void)buttonTapped:(UIButton *)button
+{
+    if ([self.delegate respondsToSelector:@selector(surfboard:didTapButtonAtIndexPath:)])
+    {
+        [self.delegate surfboard:self didTapButtonAtIndexPath:button.indexPath];
+    }
 }
 @end

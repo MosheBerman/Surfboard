@@ -36,7 +36,7 @@
  *
  */
 
-- (void)userDidTapButtonInSurfboard:(SRFSurfboardViewController*)surfboard atIndexPath:(NSIndexPath *)indexPath;
+- (void)surfboard:(SRFSurfboardViewController*)surfboard didTapButtonAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Called when the surfboard changes to a panel.
@@ -45,5 +45,6 @@
  */
 
 - (void)surfboardDidShowPanelAtIndex:(NSInteger)index;
+
 
 @end

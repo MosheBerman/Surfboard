@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRFSurfboardDelegate.h"
 
 @interface SRFSurfboardViewController : UICollectionViewController
+
+#pragma mark - Delegate
+
+/** ---
+ *  @name Delegate
+ *  ---
+ */
+
+@property (nonatomic, assign) id<SRFSurfboardDelegate> delegate;
 
 #pragma mark - Initializers
 
