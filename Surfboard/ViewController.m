@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "SRFSurfboardViewController.h"
+#import "SRFSurfboard.h"
 
-@interface ViewController ()
+@interface ViewController () <SRFSurfboardDelegate>
 
 @end
 
@@ -55,7 +55,27 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"panels" ofType:@"json"];
     NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
     [surfboard setPanels:panels];
+
+    surfboard.delegate = self;
     
     surfboard.collectionView.backgroundColor = self.view.backgroundColor;
 }
+
+#pragma mark - SRFSurfboardDelegate
+
+/** ---
+ *  @name SRFSurfboardDelegate
+ *  ---
+ */
+
+- (void)surfboard:(SRFSurfboardViewController *)surfboard didTapButtonAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)surfboard:(SRFSurfboardViewController *)surfboard didShowPanelAtIndex:(NSInteger)index
+{
+    
+}
+
 @end
