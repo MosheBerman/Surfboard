@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class SRFSurfboard;
+@class SRFSurfboardViewController;
 @class SRFSurfboardPanel;
 
-@protocol SRFSurfboardDelegate
+@protocol SRFSurfboardDelegate <NSObject>
 
 @optional
 
@@ -36,7 +36,7 @@
  *
  */
 
-- (void)userDidTapButtonInSurfboard:(SRFSurfboard*)surfboard atIndexPath:(NSIndexPath *)indexPath;
+- (void)userDidTapButtonInSurfboard:(SRFSurfboardViewController*)surfboard atIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Called when the surfboard changes to a panel.
@@ -45,7 +45,5 @@
  */
 
 - (void)surfboardDidShowPanelAtIndex:(NSInteger)index;
-
-@end
 
 @end
