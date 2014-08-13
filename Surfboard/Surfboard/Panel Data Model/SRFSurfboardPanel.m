@@ -10,4 +10,31 @@
 
 @implementation SRFSurfboardPanel
 
+#pragma mark - Initializers
+
+/** ---
+ *  @name Initializers
+ *  ---
+ */
+
+/**
+ *  Creates a panel with the configuration.
+ *
+ *  @param configuration A dictionary with configuration options.
+ *  @return A pane.
+ */
+
+- (instancetype)initWithConfiguration:(NSDictionary *)configuration
+{
+    self = [super init];
+
+    if (self)
+    {
+        _text = configuration[@"text"];
+        _image = [UIImage imageNamed:configuration[@"image"]];
+        _buttonTitle = configuration[@"button-title"];
+    }
+    
+    return self;
+}
 @end

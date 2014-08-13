@@ -44,4 +44,13 @@ NS_ENUM(NSInteger, SRFSurfboardPanelType)
 
 @property (nonatomic, strong) NSString *buttonTitle;
 
+/**
+ *  Creates a panel with the configuration.
+ *
+ *  @param configuration A dictionary with configuration options.
+ *  @return A pane.
+ */
+
+- (instancetype)initWithConfiguration:(NSDictionary *)configuration;
+
 @end
