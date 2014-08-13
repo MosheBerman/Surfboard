@@ -44,7 +44,7 @@
  *  @param index The index of the panel.
  */
 
-- (void)surfboardDidShowPanelAtIndex:(NSInteger)index;
+- (void)surfboard:(SRFSurfboardViewController *)surfboard didShowPanelAtIndex:(NSInteger)index;
 
 
 @end
