@@ -80,6 +80,12 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    return self;
+}
+
 #pragma mark - View Lifecycle
 
 /** ---
