@@ -58,7 +58,7 @@
 
     surfboard.delegate = self;
     
-    surfboard.collectionView.backgroundColor = self.view.backgroundColor;
+    surfboard.backgroundColor = self.view.backgroundColor;
 }
 
 #pragma mark - SRFSurfboardDelegate
@@ -75,7 +75,7 @@
 
 - (void)surfboard:(SRFSurfboardViewController *)surfboard didShowPanelAtIndex:(NSInteger)index
 {
-    
+//    NSLog(@"Index: %i", index);
 }
 
 @end
