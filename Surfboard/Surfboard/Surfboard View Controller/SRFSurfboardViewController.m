@@ -190,7 +190,6 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
  *  ---
  */
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     NSInteger count = self.panels.count;
@@ -543,6 +542,21 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
         [UIView animateWithDuration:0.2 animations:^{
             self.pageControl.alpha = 1.0f;
         }];
+    }
+    
+    /**
+     *  Add a border to each dot in the page control.
+     */
+    
+    [self _hackBorderOnPageControlSubviews];
+}
+
+- (void)_hackBorderOnPageControlSubviews
+{
+    for (UIView *view in self.pageControl.subviews)
+    {
+        view.layer.borderColor = [UIColor whiteColor].CGColor;
+        view.layer.borderWidth = 1.0f;
     }
 }
 #pragma mark - Scrolling Progress
