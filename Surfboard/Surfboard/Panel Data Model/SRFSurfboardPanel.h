@@ -29,7 +29,7 @@ NS_ENUM(NSInteger, SRFSurfboardPanelType)
  *  An image to load into the panel.
  *
  *  For the default panel, the dimensions of this 
- *  image should be 141 points wide and 249 points 
+ *  image should be 140 points wide and 250 points
  *  tall, or a multiple of that ratio.
  */
 
