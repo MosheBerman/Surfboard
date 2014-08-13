@@ -170,6 +170,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self _positionPageControl];
+}
+
 #pragma mark - UICollectionViewDataSource
 
 /** ---
@@ -372,12 +377,13 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      *  Center the previously centered cell.
      */
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.index inSection:0];
-    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     
     /**
      *  Update the page control.
      */
     [self _positionPageControl];
+    [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -392,6 +398,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
+    
+    if ([self.delegate respondsToSelector:@selector(surfboard:didShowPanelAtIndex:)])
+    {
+        [self.delegate surfboard:self didShowPanelAtIndex:self.index];
+    }
 }
 
 /**
