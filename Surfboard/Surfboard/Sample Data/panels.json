@@ -5,15 +5,11 @@
  },
  {
  "text" : "Surfboard makes it delightfully easy to craft onboarding experiences.",
- "image" : "surfer",
+ "image" : "happy",
  },
  {
- "text" : "You provide an array of panels and surfboard figures out the rest.",
+ "text" : "You provide an array of panels and Surfboard figures out the rest.",
  "image" : "panels",
- },
- {
- "text" : "You can create panels in code, or with JSON.",
- "image" : "code",
  },
  {
  "text" : "Each panel contain text, an image, and optionally, a button.",
@@ -32,8 +28,12 @@
  "image" : "github",
  },
  {
- "text" : "Thanks for surfing!",
- "image" : "code",
+ "text" : "If you like Surfboard give me a shoutout on Twitter.\nI'm @bermaniastudios.",
+ "image" : "hashtag",
+ },
+ {
+ "text" : "Thanks again for surfing!",
+ "image" : "surfer",
  "button" : "I'm Done!"
  }
 ]
