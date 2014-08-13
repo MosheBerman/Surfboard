@@ -18,6 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    /**
+     *  Set the background color to look like there's some kind of mist in the icon.
+     */
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.06 green:0.15 blue:0.63 alpha:1.00];
+    
+    /**
+     *  Find the buttons in the view and give them some kind of affordance.
+     */
+    
+    for (UIView *view in self.view.subviews)
+    {
+        if ([view isKindOfClass:[UIButton class]])
+        {
+            view.layer.cornerRadius = 5.0f;
+            view.layer.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.25].CGColor;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
