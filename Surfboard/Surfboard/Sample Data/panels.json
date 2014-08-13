@@ -1,15 +1,39 @@
 [
  {
- "text" : "Welcome to Surfboard.\nSwipe to continue.",
+ "text" : "Welcome to Surfboard.",
  "image" : "swipe"
  },
  {
- "text" : "Surfboard is a delightful onboarding framework for iOS.",
+ "text" : "Surfboard makes it delightfully easy to craft onboarding experiences.",
  "image" : "surfer",
  },
  {
- "text" : "Thanks for watching!",
- "image" : "surfer",
- "button" : "Moving Right Along"
+ "text" : "You provide an array of panels and surfboard figures out the rest.",
+ "image" : "panels",
+ },
+ {
+ "text" : "You can create panels in code, or with JSON.",
+ "image" : "code",
+ },
+ {
+ "text" : "Each panel contain text, an image, and optionally, a button.",
+ "image" : "panel-contents",
+ },
+ {
+ "text" : "The contents of each panel are tinted to a color that you provide.",
+ "image" : "tint",
+ },
+ {
+ "text" : "When a user taps on the optional button, you recieve a delegate callback to handle it.",
+ "image" : "delegate",
+ },
+ {
+ "text" : "See the documentation on GitHub for more information.",
+ "image" : "github",
+ },
+ {
+ "text" : "Thanks for surfing!",
+ "image" : "code",
+ "button" : "I'm Done!"
  }
 ]
