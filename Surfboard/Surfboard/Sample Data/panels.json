@@ -1,0 +1,15 @@
+[
+ {
+ "text" : "Welcome to Surfboard.\nSwipe to continue.",
+ "image" : "arrow"
+ },
+ {
+ "text" : "Surfboard is a delightful onboarding framework for iOS.",
+ "image" : "surfer",
+ },
+ {
+ "text" : "Thanks for watching!",
+ "image" : "surfer",
+ "button" : "Moving Right Along"
+ }
+]
