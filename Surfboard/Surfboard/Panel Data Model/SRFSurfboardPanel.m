@@ -32,7 +32,7 @@
     {
         _text = configuration[@"text"];
         _image = [UIImage imageNamed:configuration[@"image"]];
-        _buttonTitle = configuration[@"button-title"];
+        _buttonTitle = configuration[@"button"];
     }
     
     return self;
