@@ -23,9 +23,7 @@
     self = [super awakeAfterUsingCoder:aDecoder];
     
     if (self)
-    {
-        self.tintColor = [UIColor whiteColor];
-        
+    {   
         self.backgroundColor = [UIColor clearColor];
     }
     return self;

@@ -117,6 +117,14 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [super viewDidLoad];
     
     /**
+     *  Apply a tint color to the whole surfboard.
+     *
+     *  TODO: Support a theme manager class.
+     */
+    
+    self.collectionView.tintColor = [UIColor whiteColor];
+    
+    /**
      *  Configure the layout.
      */
     
@@ -158,6 +166,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
 //    self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
 //    self.collectionView.layer.borderWidth = 2.0f;
+
 }
 
 #pragma mark - UICollectionViewDataSource
