@@ -53,7 +53,7 @@
 		46EFD6C6199B6CBE00467EC4 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
 		46EFD6C8199B6CBE00467EC4 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
 		46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
-		46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Surfboard.xcassets; sourceTree = "<group>"; };
+		46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Surfboard.xcassets; path = ../Surfboard.xcassets; sourceTree = "<group>"; };
 		46EFD6D1199B9A0F00467EC4 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRFSurfboardDelegate.h; path = "Surfboard Delegate Protocol/SRFSurfboardDelegate.h"; sourceTree = "<group>"; };
 		46EFD6DA199BA46C00467EC4 /* SRFSurfboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRFSurfboard.h; sourceTree = "<group>"; };
 		46EFD6DC199BAA2F00467EC4 /* UIButton+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+IndexPath.h"; path = "Button Extension/UIButton+IndexPath.h"; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 				46EFD6C2199B6CBE00467EC4 /* Panel Data Model */,
 				46EFD6C5199B6CBE00467EC4 /* Sample Data */,
 				46EFD6C7199B6CBE00467EC4 /* Surfboard View Controller */,
-				46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */,
 				46EFD6D1199B9A0F00467EC4 /* SRFSurfboardDelegate.h */,
 				46EFD6DA199BA46C00467EC4 /* SRFSurfboard.h */,
 			);
@@ -182,6 +181,7 @@
 		46EFD6C5199B6CBE00467EC4 /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
+				46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */,
 				46EFD6C6199B6CBE00467EC4 /* panels.json */,
 			);
 			path = "Sample Data";
