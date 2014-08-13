@@ -40,6 +40,13 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
  */
 
 @property (nonatomic, strong) UIPageControl *pageControl;
+
+/**
+ *  A flag to control index updates during rotation.
+ */
+
+@property (nonatomic, assign) BOOL isRotating;
+
 @end
 
 @implementation SRFSurfboardViewController
@@ -89,6 +96,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
         _panels = panels;
         _pageControl = [[UIPageControl alloc] init];
         _pageControl.numberOfPages = panels.count;
+        _isRotating = NO;
     }
     
     return self;
@@ -362,11 +370,23 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
+    /**
+     *  Enable the rotation flag.
+     */
+    self.isRotating = YES;
+    
+    //  Ensure we have the right index.
     [self.collectionViewLayout invalidateLayout];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+    /**
+     *  Disable the rotation flag.
+     */
+    
+    self.isRotating = NO;
+    
     /**
      *  Force the layout to redraw, which will resize the cells.
      */
@@ -412,6 +432,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if (self.isRotating == YES)
+    {
+        return;
+    }
+    
     self.index = [self _calculatedIndex];
     [self _positionPageControl];
     [self _selectActivePage];
