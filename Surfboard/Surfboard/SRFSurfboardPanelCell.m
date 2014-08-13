@@ -27,4 +27,21 @@
     return self;
 }
 
+- (void)setPanel:(SRFSurfboardPanel *)panel
+{
+    _panel = panel;
+    
+    UIFont *font = self.textView.font;
+    self.textView.text = self.panel.text;
+    self.textView.textColor = [UIColor whiteColor];
+    self.textView.font = font;
+    
+    self.imageView.image = self.panel.image;
+    
+    [self.actionButton setTitle:self.panel.buttonTitle forState:UIControlStateNormal];
+    
+    //  Hide the button on panels with no title.
+    self.actionButton.hidden = (self.panel.buttonTitle == nil);
+}
+
 @end

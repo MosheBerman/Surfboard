@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRFSurfboardPanel.h"
 
 @interface SRFSurfboardPanelCell : UICollectionViewCell
 
@@ -14,7 +15,7 @@
  *  An outlet for the text view.
  */
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *textView;
 
 /**
  *  An outlet for the image view.
@@ -27,5 +28,11 @@
  */
 
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
+
+/**
+ *  The panel contents to be displayed.
+ */
+
+@property (nonatomic, strong) SRFSurfboardPanel *panel;
 
 @end
