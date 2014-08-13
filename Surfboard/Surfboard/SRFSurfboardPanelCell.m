@@ -18,15 +18,6 @@
 
 @implementation SRFSurfboardPanelCell
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (void)prepareForReuse
 {
     self.textView.text = self.panel.text;
