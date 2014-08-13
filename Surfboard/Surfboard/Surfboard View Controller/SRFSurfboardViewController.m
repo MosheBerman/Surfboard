@@ -175,8 +175,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      *  Debug borders Yay!
      */
     
-    //    self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
-    //    self.collectionView.layer.borderWidth = 2.0f;
+//        self.collectionView.layer.borderColor = [UIColor redColor].CGColor;
+//        self.collectionView.layer.borderWidth = 2.0f;
 }
 
 /**
@@ -295,7 +295,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.collectionView.bounds.size;
+    return self.collectionView.frame.size;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
@@ -485,6 +485,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     self.pageControl.alpha = 0.0f;
     
     [self.collectionView addSubview:self.pageControl];
+    [self.collectionView sendSubviewToBack:self.pageControl];
     
     [self _positionPageControl];
     
