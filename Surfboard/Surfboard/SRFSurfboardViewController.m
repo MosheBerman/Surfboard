@@ -112,6 +112,12 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
+    /**
+     *  Enable paging.
+     */
+    
+    self.collectionView.pagingEnabled = YES;
 }
 
 #pragma mark - UICollectionViewDataSource
