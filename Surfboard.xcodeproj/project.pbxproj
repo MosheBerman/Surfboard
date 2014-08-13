@@ -53,6 +53,7 @@
 		46EFD6C8199B6CBE00467EC4 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
 		46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
 		46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Surfboard.xcassets; sourceTree = "<group>"; };
+		46EFD6D1199B9A0F00467EC4 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRFSurfboardDelegate.h; path = "Surfboard Delegate Protocol/SRFSurfboardDelegate.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 				46EFD6C5199B6CBE00467EC4 /* Sample Data */,
 				46EFD6C7199B6CBE00467EC4 /* Surfboard View Controller */,
 				46EFD6CA199B6CBE00467EC4 /* Surfboard.xcassets */,
+				46EFD6D1199B9A0F00467EC4 /* SRFSurfboardDelegate.h */,
 			);
 			path = Surfboard;
 			sourceTree = "<group>";
