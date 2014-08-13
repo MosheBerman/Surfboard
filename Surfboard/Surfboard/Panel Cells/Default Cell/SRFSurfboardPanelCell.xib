@@ -68,6 +68,7 @@
             </constraints>
             <connections>
                 <outlet property="actionButton" destination="SQh-bK-ego" id="r4m-oo-SRv"/>
+                <outlet property="deviceImage" destination="ePr-PG-0ND" id="wVm-qf-TfX"/>
                 <outlet property="imageView" destination="wiU-3x-Gg0" id="PZ1-eY-aiv"/>
                 <outlet property="textView" destination="dMc-RP-y9y" id="XfX-kE-qZi"/>
             </connections>

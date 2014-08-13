@@ -14,6 +14,12 @@
 
 @interface SRFSurfboardPanelCell ()
 
+/**
+ *  The device image.
+ */
+
+@property (weak, nonatomic) IBOutlet UIImageView *deviceImage;
+
 @end
 
 @implementation SRFSurfboardPanelCell
@@ -32,10 +38,14 @@
 
 - (void)prepareForReuse
 {
+    
+    //  Set the title text.
     self.textView.text = self.panel.text;
     
+    //  Add the image, tinted
     self.imageView.image = [self.panel.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
+    //  Apply the title
     [self.actionButton setTitle:self.panel.buttonTitle forState:UIControlStateNormal];
     
     //  Hide the button on panels with no title.
@@ -53,6 +63,10 @@
 {
     self.actionButton.layer.cornerRadius = 5.0f;
     self.actionButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+    
+    self.textView.textColor = [self tintColor];
+    
+    self.deviceImage.image = [self.deviceImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 
 @end
