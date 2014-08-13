@@ -97,6 +97,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
         _pageControl = [[UIPageControl alloc] init];
         _pageControl.numberOfPages = panels.count;
         _isRotating = NO;
+        _tintColor = [UIColor whiteColor];
     }
     
     return self;
@@ -126,12 +127,10 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [super viewDidLoad];
     
     /**
-     *  Apply a tint color to the whole surfboard.
      *
-     *  TODO: Support a theme manager class.
      */
     
-    self.collectionView.tintColor = [UIColor whiteColor];
+    self.tintColor = [UIColor whiteColor];
     
     /**
      *  Configure the layout.
@@ -325,6 +324,19 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [self _addPageControl];
 }
 
+/**
+ *  Sets the tint color and reloads the collection view.
+ *
+ *  @param tintColor A tint color to apply to the surfboard.
+ */
+
+- (void)setTintColor:(UIColor *)tintColor
+{
+    _tintColor = tintColor;
+    
+    self.collectionView.tintColor = tintColor;
+    [self.collectionView reloadData];
+}
 
 #pragma mark - Load Panels from Configuration
 

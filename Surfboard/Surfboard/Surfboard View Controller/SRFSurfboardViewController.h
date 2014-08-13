@@ -20,6 +20,15 @@
 
 @property (nonatomic, assign) id<SRFSurfboardDelegate> delegate;
 
+#pragma mark - Tint Color
+
+/** ---
+ *  @name Tint Color
+ *  ---
+ */
+
+@property (nonatomic, strong) UIColor *tintColor;
+
 #pragma mark - Initializers
 
 /**
