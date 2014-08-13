@@ -61,6 +61,9 @@
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
+    
+    self.contentView.frame = self.bounds;
     self.actionButton.layer.cornerRadius = 5.0f;
     self.actionButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
     
@@ -74,8 +77,8 @@
      *  Debug borders
      */
     
-    self.contentView.layer.borderColor = [UIColor redColor].CGColor;
-    self.contentView.layer.borderWidth = 2.0f;
+//    self.contentView.layer.borderColor = [UIColor redColor].CGColor;
+//    self.contentView.layer.borderWidth = 2.0f;
 }
 
 @end
