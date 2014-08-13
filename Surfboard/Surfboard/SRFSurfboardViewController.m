@@ -213,11 +213,21 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 {
     NSData *panelData = [[NSData alloc] initWithContentsOfFile:path];
     
-    NSArray *panels = nil;
+    NSMutableArray *panels = [[NSMutableArray alloc] init];
     
     if (panelData)
     {
-        panels = [NSJSONSerialization JSONObjectWithData:panelData options:0 error:nil];
+        NSArray *panelDictionaries = [NSJSONSerialization JSONObjectWithData:panelData options:0 error:nil];
+        
+        /**
+         *  Iterate the panel dictionaries and "inflate" them into objects.
+         */
+        
+        for (NSDictionary *panelDictionary in panelDictionaries)
+        {
+            SRFSurfboardPanel *panel = [[SRFSurfboardPanel alloc] initWithConfiguration:panelDictionary];
+            [panels addObject:panel];
+        }
     }
     
     return panels;
