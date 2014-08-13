@@ -244,9 +244,15 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 #pragma mark - 
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.collectionViewLayout invalidateLayout];
+}
+
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-    [self.collectionView setCollectionViewLayout:self.collectionView.collectionViewLayout];
+    [self.collectionViewLayout invalidateLayout];
+    
 }
 
 @end
