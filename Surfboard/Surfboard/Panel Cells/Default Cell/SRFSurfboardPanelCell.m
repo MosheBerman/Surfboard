@@ -43,7 +43,17 @@
     self.textView.text = self.panel.text;
     
     //  Add the image, tinted
-    self.imageView.image = [self.panel.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.imageView.image = self.panel.image;
+    
+    if (self.imageView.image.renderingMode != UIImageRenderingModeAlwaysTemplate)
+    {
+        self.imageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        self.imageView.layer.borderWidth = 1.0f;
+    }
+    else
+    {
+        self.imageView.layer.borderWidth = 0.0;
+    }
     
     //  Apply the title
     [self.actionButton setTitle:self.panel.buttonTitle forState:UIControlStateNormal];
