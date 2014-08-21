@@ -187,6 +187,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 {
     [self _addPageControl];
     [self _hackBorderOnPageControlSubviews];
+    [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -465,6 +466,8 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     self.index = [self _calculatedIndex];
     [self _positionPageControl];
     [self _selectActivePage];
+    
+    [self.collectionView sendSubviewToBack:self.pageControl];
 }
 
 #pragma mark - Page Control
