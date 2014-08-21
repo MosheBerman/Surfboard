@@ -31,7 +31,13 @@
     if (self)
     {
         _text = configuration[@"text"];
-        _image = [UIImage imageNamed:configuration[@"image"]];
+        _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        
+        if ([configuration.allKeys containsObject:@"screen"])
+        {
+            _image = [UIImage imageNamed:configuration[@"screen"]];
+        }
+        
         _buttonTitle = configuration[@"button"];
     }
     
