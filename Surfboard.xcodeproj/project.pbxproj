@@ -15,11 +15,11 @@
 		462C109D1993E21600A36CF8 /* SurfboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 462C109C1993E21600A36CF8 /* SurfboardTests.m */; };
 		4635679619A7C5A000262061 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4635679419A7C5A000262061 /* panels.json */; };
 		4635679719A7C5A000262061 /* Surfboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4635679519A7C5A000262061 /* Surfboard.xcassets */; };
-		46EFD6CB199B6CBE00467EC4 /* SRFSurfboardPanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6C0199B6CBE00467EC4 /* SRFSurfboardPanelCell.m */; };
-		46EFD6CC199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EFD6C1199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib */; };
-		46EFD6CD199B6CBE00467EC4 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6C4199B6CBE00467EC4 /* SRFSurfboardPanel.m */; };
-		46EFD6CF199B6CBE00467EC4 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */; };
-		46EFD6DE199BAA2F00467EC4 /* UIButton+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EFD6DD199BAA2F00467EC4 /* UIButton+IndexPath.m */; };
+		463567AA19A7C65800262061 /* UIButton+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4635679C19A7C65800262061 /* UIButton+IndexPath.m */; };
+		463567AB19A7C65800262061 /* SRFSurfboardPanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4635679F19A7C65800262061 /* SRFSurfboardPanelCell.m */; };
+		463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */; };
+		463567AD19A7C65800262061 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A319A7C65800262061 /* SRFSurfboardPanel.m */; };
+		463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A919A7C65800262061 /* SRFSurfboardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,17 +47,17 @@
 		462C109C1993E21600A36CF8 /* SurfboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfboardTests.m; sourceTree = "<group>"; };
 		4635679419A7C5A000262061 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
 		4635679519A7C5A000262061 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Surfboard.xcassets; sourceTree = "<group>"; };
-		46EFD6BF199B6CBE00467EC4 /* SRFSurfboardPanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanelCell.h; sourceTree = "<group>"; };
-		46EFD6C0199B6CBE00467EC4 /* SRFSurfboardPanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanelCell.m; sourceTree = "<group>"; };
-		46EFD6C1199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardPanelCell.xib; sourceTree = "<group>"; };
-		46EFD6C3199B6CBE00467EC4 /* SRFSurfboardPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanel.h; sourceTree = "<group>"; };
-		46EFD6C4199B6CBE00467EC4 /* SRFSurfboardPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanel.m; sourceTree = "<group>"; };
-		46EFD6C8199B6CBE00467EC4 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
-		46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
-		46EFD6D1199B9A0F00467EC4 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRFSurfboardDelegate.h; path = "Surfboard Delegate Protocol/SRFSurfboardDelegate.h"; sourceTree = "<group>"; };
-		46EFD6DA199BA46C00467EC4 /* SRFSurfboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRFSurfboard.h; sourceTree = "<group>"; };
-		46EFD6DC199BAA2F00467EC4 /* UIButton+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+IndexPath.h"; path = "Button Extension/UIButton+IndexPath.h"; sourceTree = "<group>"; };
-		46EFD6DD199BAA2F00467EC4 /* UIButton+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+IndexPath.m"; path = "Button Extension/UIButton+IndexPath.m"; sourceTree = "<group>"; };
+		4635679B19A7C65800262061 /* UIButton+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IndexPath.h"; sourceTree = "<group>"; };
+		4635679C19A7C65800262061 /* UIButton+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+IndexPath.m"; sourceTree = "<group>"; };
+		4635679E19A7C65800262061 /* SRFSurfboardPanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanelCell.h; sourceTree = "<group>"; };
+		4635679F19A7C65800262061 /* SRFSurfboardPanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanelCell.m; sourceTree = "<group>"; };
+		463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardPanelCell.xib; sourceTree = "<group>"; };
+		463567A219A7C65800262061 /* SRFSurfboardPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanel.h; sourceTree = "<group>"; };
+		463567A319A7C65800262061 /* SRFSurfboardPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanel.m; sourceTree = "<group>"; };
+		463567A419A7C65800262061 /* SRFSurfboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboard.h; sourceTree = "<group>"; };
+		463567A619A7C65800262061 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardDelegate.h; sourceTree = "<group>"; };
+		463567A819A7C65800262061 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
+		463567A919A7C65800262061 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 				462C10881993E21600A36CF8 /* AppDelegate.m */,
 				462C108A1993E21600A36CF8 /* ViewController.h */,
 				462C108B1993E21600A36CF8 /* ViewController.m */,
+				4635679819A7C65800262061 /* SRFSurfboard */,
 				4635679319A7C5A000262061 /* Sample Data */,
-				46EFD6BC199B6CBE00467EC4 /* Surfboard */,
 				462C108D1993E21600A36CF8 /* Main.storyboard */,
 				462C10901993E21600A36CF8 /* Images.xcassets */,
 				462C10831993E21600A36CF8 /* Supporting Files */,
@@ -148,62 +148,70 @@
 			path = "Surfboard/Sample Data";
 			sourceTree = SOURCE_ROOT;
 		};
-		46EFD6BC199B6CBE00467EC4 /* Surfboard */ = {
+		4635679819A7C65800262061 /* SRFSurfboard */ = {
 			isa = PBXGroup;
 			children = (
-				46EFD6BD199B6CBE00467EC4 /* Panel Cells */,
-				46EFD6C2199B6CBE00467EC4 /* Panel Data Model */,
-				46EFD6C7199B6CBE00467EC4 /* Surfboard View Controller */,
-				46EFD6D1199B9A0F00467EC4 /* SRFSurfboardDelegate.h */,
-				46EFD6DA199BA46C00467EC4 /* SRFSurfboard.h */,
+				4635679919A7C65800262061 /* Panel Cells */,
+				463567A119A7C65800262061 /* Panel Data Model */,
+				463567A419A7C65800262061 /* SRFSurfboard.h */,
+				463567A519A7C65800262061 /* Surfboard Delegate Protocol */,
+				463567A719A7C65800262061 /* Surfboard View Controller */,
 			);
-			path = Surfboard;
+			path = SRFSurfboard;
 			sourceTree = "<group>";
 		};
-		46EFD6BD199B6CBE00467EC4 /* Panel Cells */ = {
+		4635679919A7C65800262061 /* Panel Cells */ = {
 			isa = PBXGroup;
 			children = (
-				46EFD6D9199BA2FA00467EC4 /* Class Extensions */,
-				46EFD6BE199B6CBE00467EC4 /* Default Cell */,
+				4635679A19A7C65800262061 /* Button Extension */,
+				4635679D19A7C65800262061 /* Default Cell */,
 			);
 			path = "Panel Cells";
 			sourceTree = "<group>";
 		};
-		46EFD6BE199B6CBE00467EC4 /* Default Cell */ = {
+		4635679A19A7C65800262061 /* Button Extension */ = {
 			isa = PBXGroup;
 			children = (
-				46EFD6BF199B6CBE00467EC4 /* SRFSurfboardPanelCell.h */,
-				46EFD6C0199B6CBE00467EC4 /* SRFSurfboardPanelCell.m */,
-				46EFD6C1199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib */,
+				4635679B19A7C65800262061 /* UIButton+IndexPath.h */,
+				4635679C19A7C65800262061 /* UIButton+IndexPath.m */,
+			);
+			path = "Button Extension";
+			sourceTree = "<group>";
+		};
+		4635679D19A7C65800262061 /* Default Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4635679E19A7C65800262061 /* SRFSurfboardPanelCell.h */,
+				4635679F19A7C65800262061 /* SRFSurfboardPanelCell.m */,
+				463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */,
 			);
 			path = "Default Cell";
 			sourceTree = "<group>";
 		};
-		46EFD6C2199B6CBE00467EC4 /* Panel Data Model */ = {
+		463567A119A7C65800262061 /* Panel Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				46EFD6C3199B6CBE00467EC4 /* SRFSurfboardPanel.h */,
-				46EFD6C4199B6CBE00467EC4 /* SRFSurfboardPanel.m */,
+				463567A219A7C65800262061 /* SRFSurfboardPanel.h */,
+				463567A319A7C65800262061 /* SRFSurfboardPanel.m */,
 			);
 			path = "Panel Data Model";
 			sourceTree = "<group>";
 		};
-		46EFD6C7199B6CBE00467EC4 /* Surfboard View Controller */ = {
+		463567A519A7C65800262061 /* Surfboard Delegate Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				46EFD6C8199B6CBE00467EC4 /* SRFSurfboardViewController.h */,
-				46EFD6C9199B6CBE00467EC4 /* SRFSurfboardViewController.m */,
+				463567A619A7C65800262061 /* SRFSurfboardDelegate.h */,
 			);
-			path = "Surfboard View Controller";
+			path = "Surfboard Delegate Protocol";
 			sourceTree = "<group>";
 		};
-		46EFD6D9199BA2FA00467EC4 /* Class Extensions */ = {
+		463567A719A7C65800262061 /* Surfboard View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				46EFD6DC199BAA2F00467EC4 /* UIButton+IndexPath.h */,
-				46EFD6DD199BAA2F00467EC4 /* UIButton+IndexPath.m */,
+				463567A819A7C65800262061 /* SRFSurfboardViewController.h */,
+				463567A919A7C65800262061 /* SRFSurfboardViewController.m */,
 			);
-			name = "Class Extensions";
+			path = "Surfboard View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +297,7 @@
 			files = (
 				462C108F1993E21600A36CF8 /* Main.storyboard in Resources */,
 				4635679719A7C5A000262061 /* Surfboard.xcassets in Resources */,
-				46EFD6CC199B6CBE00467EC4 /* SRFSurfboardPanelCell.xib in Resources */,
+				463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */,
 				4635679619A7C5A000262061 /* panels.json in Resources */,
 				462C10911993E21600A36CF8 /* Images.xcassets in Resources */,
 			);
@@ -310,12 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				462C108C1993E21600A36CF8 /* ViewController.m in Sources */,
-				46EFD6CB199B6CBE00467EC4 /* SRFSurfboardPanelCell.m in Sources */,
-				46EFD6CD199B6CBE00467EC4 /* SRFSurfboardPanel.m in Sources */,
-				46EFD6CF199B6CBE00467EC4 /* SRFSurfboardViewController.m in Sources */,
+				463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */,
+				463567AA19A7C65800262061 /* UIButton+IndexPath.m in Sources */,
 				462C10891993E21600A36CF8 /* AppDelegate.m in Sources */,
-				46EFD6DE199BAA2F00467EC4 /* UIButton+IndexPath.m in Sources */,
+				463567AD19A7C65800262061 /* SRFSurfboardPanel.m in Sources */,
 				462C10861993E21600A36CF8 /* main.m in Sources */,
+				463567AB19A7C65800262061 /* SRFSurfboardPanelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
