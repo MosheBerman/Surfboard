@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "Surfboard is a delightful onboarding library for iOS."
   s.description  = <<-DESC
-	Surfboard is a delightful onboarding library for iOS.
+	Surfboard is a delightful onboarding library for iOS. Configure your onboarding experience with JSON.
                    DESC
   s.homepage     = "https://github.com/MosheBerman/Surfboard"
   s.screenshots  = "https://raw.github.com/MosheBerman/Surfboard/master/Screenshots/Intro.png", "https://raw.github.com/MosheBerman/Surfboard/master/Screenshots/Panels.png"
