@@ -18,9 +18,13 @@ Add the contents of the SRFSurfboard project to your directory, or use Cocoapods
 
 `pod 'Surfboard'`
 
+Import `SRFSurfboard.h` to get access to all of the great features of Surfboard.
+
 Getting Started
 ---
 When we talk about Surfboards, we talk about a set of panels. Each panel is a screenful of information, including some text, an image or screenshot, and optionally, a button. 
+
+Take a look at the Sample Data directory for an idea of what a sample JSON configuration looks like.
 
 Showing a Surfboard
 ---
