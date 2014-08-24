@@ -3,6 +3,10 @@ Sufboard
 
 Surfboard is a delightful onboarding library for iOS.
 
+Screenshots
+---
+![Intro](Screenshots/Intro.png)
+![Panels](Screenshots/Panels.png)
 
 Dependencies
 ---
