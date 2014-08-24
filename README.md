@@ -16,7 +16,7 @@ Installing Surfboard
 ---
 Add the contents of the SRFSurfboard project to your directory, or use Cocoapods:
 
-`pod 'SRFSurfboard'`
+`pod 'Surfboard'`
 
 Getting Started
 ---
