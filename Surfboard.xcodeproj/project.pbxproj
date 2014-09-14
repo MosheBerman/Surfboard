@@ -12,7 +12,6 @@
 		462C108C1993E21600A36CF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462C108B1993E21600A36CF8 /* ViewController.m */; };
 		462C108F1993E21600A36CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462C108D1993E21600A36CF8 /* Main.storyboard */; };
 		462C10911993E21600A36CF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462C10901993E21600A36CF8 /* Images.xcassets */; };
-		462C109D1993E21600A36CF8 /* SurfboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 462C109C1993E21600A36CF8 /* SurfboardTests.m */; };
 		4635679619A7C5A000262061 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4635679419A7C5A000262061 /* panels.json */; };
 		4635679719A7C5A000262061 /* Surfboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4635679519A7C5A000262061 /* Surfboard.xcassets */; };
 		463567AA19A7C65800262061 /* UIButton+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4635679C19A7C65800262061 /* UIButton+IndexPath.m */; };
@@ -21,16 +20,6 @@
 		463567AD19A7C65800262061 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A319A7C65800262061 /* SRFSurfboardPanel.m */; };
 		463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A919A7C65800262061 /* SRFSurfboardViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		462C10971993E21600A36CF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 462C10781993E21600A36CF8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 462C107F1993E21600A36CF8;
-			remoteInfo = Surfboard;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		462C10801993E21600A36CF8 /* Surfboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surfboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +31,6 @@
 		462C108B1993E21600A36CF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		462C108E1993E21600A36CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		462C10901993E21600A36CF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		462C10961993E21600A36CF8 /* SurfboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		462C109B1993E21600A36CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462C109C1993E21600A36CF8 /* SurfboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfboardTests.m; sourceTree = "<group>"; };
 		4635679419A7C5A000262061 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
@@ -68,13 +56,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		462C10931993E21600A36CF8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				462C10801993E21600A36CF8 /* Surfboard.app */,
-				462C10961993E21600A36CF8 /* SurfboardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,24 +214,6 @@
 			productReference = 462C10801993E21600A36CF8 /* Surfboard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		462C10951993E21600A36CF8 /* SurfboardTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 462C10A31993E21600A36CF8 /* Build configuration list for PBXNativeTarget "SurfboardTests" */;
-			buildPhases = (
-				462C10921993E21600A36CF8 /* Sources */,
-				462C10931993E21600A36CF8 /* Frameworks */,
-				462C10941993E21600A36CF8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				462C10981993E21600A36CF8 /* PBXTargetDependency */,
-			);
-			name = SurfboardTests;
-			productName = SurfboardTests;
-			productReference = 462C10961993E21600A36CF8 /* SurfboardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +226,6 @@
 					462C107F1993E21600A36CF8 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = HK64RUWW3P;
-					};
-					462C10951993E21600A36CF8 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 462C107F1993E21600A36CF8;
 					};
 				};
 			};
@@ -285,7 +243,6 @@
 			projectRoot = "";
 			targets = (
 				462C107F1993E21600A36CF8 /* Surfboard */,
-				462C10951993E21600A36CF8 /* SurfboardTests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,13 +257,6 @@
 				463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */,
 				4635679619A7C5A000262061 /* panels.json in Resources */,
 				462C10911993E21600A36CF8 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		462C10941993E21600A36CF8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,23 +277,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		462C10921993E21600A36CF8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				462C109D1993E21600A36CF8 /* SurfboardTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		462C10981993E21600A36CF8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 462C107F1993E21600A36CF8 /* Surfboard */;
-			targetProxy = 462C10971993E21600A36CF8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		462C108D1993E21600A36CF8 /* Main.storyboard */ = {
@@ -465,40 +399,6 @@
 			};
 			name = Release;
 		};
-		462C10A41993E21600A36CF8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Surfboard.app/Surfboard";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SurfboardTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		462C10A51993E21600A36CF8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Surfboard.app/Surfboard";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SurfboardTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,15 +416,6 @@
 			buildConfigurations = (
 				462C10A11993E21600A36CF8 /* Debug */,
 				462C10A21993E21600A36CF8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		462C10A31993E21600A36CF8 /* Build configuration list for PBXNativeTarget "SurfboardTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				462C10A41993E21600A36CF8 /* Debug */,
-				462C10A51993E21600A36CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
