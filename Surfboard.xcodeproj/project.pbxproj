@@ -31,8 +31,6 @@
 		462C108B1993E21600A36CF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		462C108E1993E21600A36CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		462C10901993E21600A36CF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		462C109B1993E21600A36CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		462C109C1993E21600A36CF8 /* SurfboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurfboardTests.m; sourceTree = "<group>"; };
 		4635679419A7C5A000262061 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
 		4635679519A7C5A000262061 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Surfboard.xcassets; sourceTree = "<group>"; };
 		4635679B19A7C65800262061 /* UIButton+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IndexPath.h"; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				462C10821993E21600A36CF8 /* Surfboard */,
-				462C10991993E21600A36CF8 /* SurfboardTests */,
 				462C10811993E21600A36CF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,23 +94,6 @@
 			children = (
 				462C10841993E21600A36CF8 /* Info.plist */,
 				462C10851993E21600A36CF8 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		462C10991993E21600A36CF8 /* SurfboardTests */ = {
-			isa = PBXGroup;
-			children = (
-				462C109C1993E21600A36CF8 /* SurfboardTests.m */,
-				462C109A1993E21600A36CF8 /* Supporting Files */,
-			);
-			path = SurfboardTests;
-			sourceTree = "<group>";
-		};
-		462C109A1993E21600A36CF8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				462C109B1993E21600A36CF8 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
