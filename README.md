@@ -1,4 +1,4 @@
-Sufboard
+Surfboard
 ========
 
 Surfboard is a delightful onboarding library for iOS.
