@@ -10,29 +10,29 @@
 	<string>Surfboard</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>40FF93D2-C60A-47B7-8811-5442F519F47C</key>
-		<string>https://github.com/MosheBerman/Sufboard.git</string>
+		<key>37C8618B74F13894597AB3721D2C3FB22C5B72C9</key>
+		<string>https://github.com/sdgandhi/Surfboard.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Surfboard.xcodeproj/project.xcworkspace</string>
+	<string>Surfboard.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>40FF93D2-C60A-47B7-8811-5442F519F47C</key>
+		<key>37C8618B74F13894597AB3721D2C3FB22C5B72C9</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/MosheBerman/Sufboard.git</string>
+	<string>https://github.com/sdgandhi/Surfboard.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>40FF93D2-C60A-47B7-8811-5442F519F47C</string>
+	<string>37C8618B74F13894597AB3721D2C3FB22C5B72C9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>40FF93D2-C60A-47B7-8811-5442F519F47C</string>
+			<string>37C8618B74F13894597AB3721D2C3FB22C5B72C9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Surfboard</string>
 		</dict>

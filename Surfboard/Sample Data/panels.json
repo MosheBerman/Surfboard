@@ -1,7 +1,8 @@
 [
  {
+ "type" : "1",
  "text" : "Welcome to Surfboard.",
- "image" : "swipe",
+ "subtitle" : "Subtitle",
  },
  {
  "text" : "Surfboard makes it delightfully easy to craft onboarding experiences.",

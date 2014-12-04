@@ -30,15 +30,33 @@
 
     if (self)
     {
-        _text = configuration[@"text"];
-        _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        _type = configuration[@"type"] ? [[configuration objectForKey:@"type"] integerValue] : 0;
         
-        if ([configuration.allKeys containsObject:@"screen"])
-        {
-            _image = [UIImage imageNamed:configuration[@"screen"]];
+        switch (_type) {
+            case SRFSurfboardPanelDefault: {
+                _text = configuration[@"text"];
+                
+                _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+                
+                if ([configuration.allKeys containsObject:@"screen"])
+                {
+                    _image = [UIImage imageNamed:configuration[@"screen"]];
+                }
+                
+                _buttonTitle = configuration[@"button"];
+            }
+                break;
+            case SRFSurfboardPanelSubtitle: {
+                _text = configuration[@"text"];
+                
+                _subtitle = configuration[@"subtitle"];
+                
+                _buttonTitle = configuration[@"button"];
+            }
+                
+            default:
+                break;
         }
-        
-        _buttonTitle = configuration[@"button"];
     }
     
     return self;

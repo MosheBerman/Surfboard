@@ -8,6 +8,7 @@
 
 #import "SRFSurfboardViewController.h"
 #import "SRFSurfboardPanelCell.h"   //  the panel cell
+#import "SRFSurfboardSubtitlePanelCell.h"   //  the panel cell
 #import "SRFSurfboardPanel.h"
 #import "UIButton+IndexPath.h"
 
@@ -153,8 +154,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      *  Register a nib for the surfboard panel class.
      */
     
-    UINib *nib = [UINib nibWithNibName:@"SRFSurfboardPanelCell" bundle:nil];
-    [self.collectionView registerNib:nib forCellWithReuseIdentifier:kSurfboardPanelIdentifier];
+    UINib *panelType1 = [UINib nibWithNibName:@"SRFSurfboardPanelCell" bundle:nil];
+    [self.collectionView registerNib:panelType1 forCellWithReuseIdentifier:@"SRFSurfboardPanelCell"];
+    
+    UINib *panelType2 = [UINib nibWithNibName:@"SRFSurfboardSubtitlePanelCell" bundle:nil];
+    [self.collectionView registerNib:panelType2 forCellWithReuseIdentifier:@"SRFSurfboardSubtitlePanelCell"];
     
     /**
      *  Wire up the delegate and data source.
@@ -207,12 +211,23 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SRFSurfboardPanelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSurfboardPanelIdentifier forIndexPath:indexPath];
+    id cell;
     
     if (indexPath.row >= 0 && indexPath.row < self.panels.count)
     {
         SRFSurfboardPanel *panel = self.panels[indexPath.row];
-        cell.panel = panel;
+        
+        switch (panel.type) {
+            case SRFSurfboardPanelDefault:
+                cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardPanelCell" forIndexPath:indexPath];
+                ((SRFSurfboardPanelCell *)cell).panel = panel;
+                break;
+            case SRFSurfboardPanelSubtitle:
+                cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardSubtitlePanelCell" forIndexPath:indexPath];
+                ((SRFSurfboardSubtitlePanelCell *)cell).panel = panel;
+            default:
+                break;
+        }
         
         [self _prepareButtonsInCell:cell atIndexPath:indexPath];
         

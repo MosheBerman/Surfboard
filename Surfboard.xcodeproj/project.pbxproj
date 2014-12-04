@@ -19,6 +19,8 @@
 		463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */; };
 		463567AD19A7C65800262061 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A319A7C65800262061 /* SRFSurfboardPanel.m */; };
 		463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A919A7C65800262061 /* SRFSurfboardViewController.m */; };
+		DCE947301A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE9472F1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m */; };
+		DCE947321A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE947311A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,9 @@
 		463567A619A7C65800262061 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardDelegate.h; sourceTree = "<group>"; };
 		463567A819A7C65800262061 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
 		463567A919A7C65800262061 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
+		DCE9472E1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardSubtitlePanelCell.h; sourceTree = "<group>"; };
+		DCE9472F1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardSubtitlePanelCell.m; sourceTree = "<group>"; };
+		DCE947311A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardSubtitlePanelCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,9 @@
 				4635679E19A7C65800262061 /* SRFSurfboardPanelCell.h */,
 				4635679F19A7C65800262061 /* SRFSurfboardPanelCell.m */,
 				463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */,
+				DCE9472E1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.h */,
+				DCE9472F1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m */,
+				DCE947311A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib */,
 			);
 			path = "Default Cell";
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				462C108F1993E21600A36CF8 /* Main.storyboard in Resources */,
 				4635679719A7C5A000262061 /* Surfboard.xcassets in Resources */,
 				463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */,
+				DCE947321A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib in Resources */,
 				4635679619A7C5A000262061 /* panels.json in Resources */,
 				462C10911993E21600A36CF8 /* Images.xcassets in Resources */,
 			);
@@ -248,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462C108C1993E21600A36CF8 /* ViewController.m in Sources */,
+				DCE947301A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m in Sources */,
 				463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */,
 				463567AA19A7C65800262061 /* UIButton+IndexPath.m in Sources */,
 				462C10891993E21600A36CF8 /* AppDelegate.m in Sources */,
