@@ -13,7 +13,8 @@
  */
 typedef enum : NSUInteger {
     SRFSurfboardPanelDefault,
-    SRFSurfboardPanelSubtitle
+    SRFSurfboardPanelSubtitle,
+    SRFSurfboardPanelFeature
 } SRFSurfboardPanelType;
 
 @interface SRFSurfboardPanel : NSObject

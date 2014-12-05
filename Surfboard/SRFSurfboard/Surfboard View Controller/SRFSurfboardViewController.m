@@ -9,6 +9,7 @@
 #import "SRFSurfboardViewController.h"
 #import "SRFSurfboardPanelCell.h"   //  the panel cell
 #import "SRFSurfboardSubtitlePanelCell.h"   //  the panel cell
+#import "SRFSurfboardFeaturePanelCell.h"   //  the panel cell
 #import "SRFSurfboardPanel.h"
 #import "UIButton+IndexPath.h"
 
@@ -160,6 +161,9 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     UINib *panelType2 = [UINib nibWithNibName:@"SRFSurfboardSubtitlePanelCell" bundle:nil];
     [self.collectionView registerNib:panelType2 forCellWithReuseIdentifier:@"SRFSurfboardSubtitlePanelCell"];
     
+    UINib *panelType3 = [UINib nibWithNibName:@"SRFSurfboardFeaturePanelCell" bundle:nil];
+    [self.collectionView registerNib:panelType3 forCellWithReuseIdentifier:@"SRFSurfboardFeaturePanelCell"];
+    
     /**
      *  Wire up the delegate and data source.
      */
@@ -224,6 +228,10 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
                 break;
             case SRFSurfboardPanelSubtitle:
                 cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardSubtitlePanelCell" forIndexPath:indexPath];
+                ((SRFSurfboardSubtitlePanelCell *)cell).panel = panel;
+                break;
+            case SRFSurfboardPanelFeature:
+                cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardFeaturePanelCell" forIndexPath:indexPath];
                 ((SRFSurfboardSubtitlePanelCell *)cell).panel = panel;
             default:
                 break;

@@ -19,6 +19,8 @@
 		463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */; };
 		463567AD19A7C65800262061 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A319A7C65800262061 /* SRFSurfboardPanel.m */; };
 		463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463567A919A7C65800262061 /* SRFSurfboardViewController.m */; };
+		DCAA72AA1A313CE400B1024E /* SRFSurfboardFeaturePanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAA72A81A313CE400B1024E /* SRFSurfboardFeaturePanelCell.m */; };
+		DCAA72AB1A313CE400B1024E /* SRFSurfboardFeaturePanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAA72A91A313CE400B1024E /* SRFSurfboardFeaturePanelCell.xib */; };
 		DCE947301A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE9472F1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m */; };
 		DCE947321A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCE947311A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,9 @@
 		463567A619A7C65800262061 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardDelegate.h; sourceTree = "<group>"; };
 		463567A819A7C65800262061 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
 		463567A919A7C65800262061 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
+		DCAA72A71A313CE400B1024E /* SRFSurfboardFeaturePanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardFeaturePanelCell.h; sourceTree = "<group>"; };
+		DCAA72A81A313CE400B1024E /* SRFSurfboardFeaturePanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardFeaturePanelCell.m; sourceTree = "<group>"; };
+		DCAA72A91A313CE400B1024E /* SRFSurfboardFeaturePanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardFeaturePanelCell.xib; sourceTree = "<group>"; };
 		DCE9472E1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardSubtitlePanelCell.h; sourceTree = "<group>"; };
 		DCE9472F1A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardSubtitlePanelCell.m; sourceTree = "<group>"; };
 		DCE947311A2FF691008104C6 /* SRFSurfboardSubtitlePanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardSubtitlePanelCell.xib; sourceTree = "<group>"; };
@@ -146,6 +151,9 @@
 		4635679D19A7C65800262061 /* Default Cell */ = {
 			isa = PBXGroup;
 			children = (
+				DCAA72A71A313CE400B1024E /* SRFSurfboardFeaturePanelCell.h */,
+				DCAA72A81A313CE400B1024E /* SRFSurfboardFeaturePanelCell.m */,
+				DCAA72A91A313CE400B1024E /* SRFSurfboardFeaturePanelCell.xib */,
 				4635679E19A7C65800262061 /* SRFSurfboardPanelCell.h */,
 				4635679F19A7C65800262061 /* SRFSurfboardPanelCell.m */,
 				463567A019A7C65800262061 /* SRFSurfboardPanelCell.xib */,
@@ -240,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAA72AB1A313CE400B1024E /* SRFSurfboardFeaturePanelCell.xib in Resources */,
 				462C108F1993E21600A36CF8 /* Main.storyboard in Resources */,
 				4635679719A7C5A000262061 /* Surfboard.xcassets in Resources */,
 				463567AC19A7C65800262061 /* SRFSurfboardPanelCell.xib in Resources */,
@@ -257,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462C108C1993E21600A36CF8 /* ViewController.m in Sources */,
+				DCAA72AA1A313CE400B1024E /* SRFSurfboardFeaturePanelCell.m in Sources */,
 				DCE947301A2FF623008104C6 /* SRFSurfboardSubtitlePanelCell.m in Sources */,
 				463567AE19A7C65800262061 /* SRFSurfboardViewController.m in Sources */,
 				463567AA19A7C65800262061 /* UIButton+IndexPath.m in Sources */,

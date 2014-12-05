@@ -53,7 +53,22 @@
                 
                 _buttonTitle = configuration[@"button"];
             }
+                break;
+            case SRFSurfboardPanelFeature: {
+                _text = configuration[@"text"];
                 
+                _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+                
+                _subtitle = configuration[@"subtitle"];
+
+                if ([configuration.allKeys containsObject:@"screen"])
+                {
+                    _image = [UIImage imageNamed:configuration[@"screen"]];
+                }
+                
+                _buttonTitle = configuration[@"button"];
+            }
+                break;
             default:
                 break;
         }

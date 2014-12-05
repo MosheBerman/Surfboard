@@ -5,8 +5,10 @@
  "subtitle" : "Subtitle",
  },
  {
+ "type" : "2",
  "text" : "Surfboard makes it delightfully easy to craft onboarding experiences.",
- "image" : "surfer",
+ "subtitle" : "Subtitle",
+ "image" : "panels",
  },
  {
  "text" : "You provide an array of panels and Surfboard figures out the rest.",
