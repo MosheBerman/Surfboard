@@ -64,6 +64,7 @@
             </constraints>
             <connections>
                 <outlet property="actionButton" destination="SQh-bK-ego" id="r4m-oo-SRv"/>
+                <outlet property="imageView" destination="al1-z9-fk9" id="Sot-tE-gPj"/>
                 <outlet property="subTitle" destination="rio-ao-Dh7" id="MeV-rg-TKW"/>
                 <outlet property="textView" destination="dMc-RP-y9y" id="XfX-kE-qZi"/>
             </connections>
