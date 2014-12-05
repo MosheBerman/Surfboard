@@ -198,6 +198,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
 }
 
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 /** ---
