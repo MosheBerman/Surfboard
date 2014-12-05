@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.license 	 = 'MIT'
   s.platform     = :ios, '7.0'
   s.source       = { :git => "https://github.com/MosheBerman/Surfboard.git", :tag => "1.0.0"} 
-  s.source_files  = 'Classes', 'Surfboard/SRFSurfboard/**/*.{h,m}'
+  s.source_files  = 'Classes', 'Surfboard/SRFSurfboard/**/*.{h,m,xib}'
   s.requires_arc = true
 end
