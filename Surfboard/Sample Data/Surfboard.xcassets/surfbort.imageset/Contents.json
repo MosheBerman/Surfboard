@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "iTunesArtwork.png"
+      "filename" : "surfbort.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "iTunesArtwork@2x.png"
+      "filename" : "surfbort@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "surfbort@3x.png"
     }
   ],
   "info" : {

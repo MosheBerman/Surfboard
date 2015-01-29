@@ -1,6 +1,6 @@
 {
   "images" : [
-{
+    {
       "idiom" : "universal",
       "scale" : "1x",
       "filename" : "panels.png"
@@ -9,6 +9,10 @@
       "idiom" : "universal",
       "scale" : "2x",
       "filename" : "panels@2x.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
