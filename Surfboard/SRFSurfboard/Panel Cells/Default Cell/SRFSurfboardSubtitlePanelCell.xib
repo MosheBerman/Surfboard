@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,29 +15,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-s3-2j5">
-                        <rect key="frame" x="20" y="514" width="280" height="24"/>
+                        <rect key="frame" x="20" y="488" width="280" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="Qsu-Fe-fGK"/>
+                            <constraint firstAttribute="height" constant="50" id="Qsu-Fe-fGK"/>
                         </constraints>
                         <state key="normal" title="Button">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="4EJ-Uc-CAy">
-                        <rect key="frame" x="15" y="20" width="290" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="TP3-U8-NGJ"/>
-                        </constraints>
+                        <rect key="frame" x="15" y="20" width="290" height="39"/>
                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="Azm-6C-h7d">
-                        <rect key="frame" x="15" y="136" width="290" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="UaU-76-Y2d"/>
-                        </constraints>
+                        <rect key="frame" x="15" y="75" width="290" height="28"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -55,6 +49,7 @@
                 <constraint firstItem="4EJ-Uc-CAy" firstAttribute="top" secondItem="cLO-J5-8Bj" secondAttribute="top" constant="20" id="adw-Uc-GO9"/>
                 <constraint firstAttribute="trailing" secondItem="8UK-s3-2j5" secondAttribute="trailing" constant="20" id="k76-Fw-kC6"/>
                 <constraint firstAttribute="trailing" secondItem="4EJ-Uc-CAy" secondAttribute="trailing" constant="15" id="rnV-fv-6oS"/>
+                <constraint firstItem="8UK-s3-2j5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Azm-6C-h7d" secondAttribute="bottom" constant="20" id="saK-FA-0Uf"/>
                 <constraint firstItem="Azm-6C-h7d" firstAttribute="leading" secondItem="cLO-J5-8Bj" secondAttribute="leading" constant="15" id="ykH-RO-Id2"/>
             </constraints>
             <connections>
