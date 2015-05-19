@@ -28,7 +28,7 @@ Take a look at the Sample Data directory for an idea of what a sample JSON confi
 
 Showing a Surfboard
 ---
-You can show a surfboard by using a segeue, or by creating a an instance of `SRFSurfboardViewController` and passing it an array of some panels. You can also pass a path to a JSON file, which we'll discuss in just a second.
+You can show a surfboard by using a segue, or by creating a an instance of `SRFSurfboardViewController` and passing it an array of some panels. You can also pass a path to a JSON file, which we'll discuss in just a second.
 
 The two initializers for a surfboard:
 
