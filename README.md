@@ -14,7 +14,7 @@ Surfboard was developed with Xcode 5 and the iOS 7 SDK. It uses autolayout and `
 
 Installing Surfboard
 ---
-Add the contents of the SRFSurfboard project to your directory, or use Cocoapods:
+Add the contents of the SRFSurfboard project to your directory, or use CocoaPods:
 
 `pod 'Surfboard'`
 
