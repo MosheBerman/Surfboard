@@ -8,6 +8,8 @@
 
 #import "SRFSurfboardViewController.h"
 #import "SRFSurfboardPanelCell.h"   //  the panel cell
+#import "SRFSurfboardSubtitlePanelCell.h"   //  the panel cell
+#import "SRFSurfboardFeaturePanelCell.h"   //  the panel cell
 #import "SRFSurfboardPanel.h"
 #import "UIButton+IndexPath.h"
 
@@ -153,8 +155,14 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
      *  Register a nib for the surfboard panel class.
      */
     
-    UINib *nib = [UINib nibWithNibName:@"SRFSurfboardPanelCell" bundle:nil];
-    [self.collectionView registerNib:nib forCellWithReuseIdentifier:kSurfboardPanelIdentifier];
+    UINib *panelType1 = [UINib nibWithNibName:@"SRFSurfboardPanelCell" bundle:nil];
+    [self.collectionView registerNib:panelType1 forCellWithReuseIdentifier:@"SRFSurfboardPanelCell"];
+    
+    UINib *panelType2 = [UINib nibWithNibName:@"SRFSurfboardSubtitlePanelCell" bundle:nil];
+    [self.collectionView registerNib:panelType2 forCellWithReuseIdentifier:@"SRFSurfboardSubtitlePanelCell"];
+    
+    UINib *panelType3 = [UINib nibWithNibName:@"SRFSurfboardFeaturePanelCell" bundle:nil];
+    [self.collectionView registerNib:panelType3 forCellWithReuseIdentifier:@"SRFSurfboardFeaturePanelCell"];
     
     /**
      *  Wire up the delegate and data source.
@@ -190,6 +198,11 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
 }
 
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 /** ---
@@ -207,12 +220,27 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SRFSurfboardPanelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSurfboardPanelIdentifier forIndexPath:indexPath];
+    id cell;
     
     if (indexPath.row >= 0 && indexPath.row < self.panels.count)
     {
         SRFSurfboardPanel *panel = self.panels[indexPath.row];
-        cell.panel = panel;
+        
+        switch (panel.type) {
+            case SRFSurfboardPanelDefault:
+                cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardPanelCell" forIndexPath:indexPath];
+                ((SRFSurfboardPanelCell *)cell).panel = panel;
+                break;
+            case SRFSurfboardPanelSubtitle:
+                cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardSubtitlePanelCell" forIndexPath:indexPath];
+                ((SRFSurfboardSubtitlePanelCell *)cell).panel = panel;
+                break;
+            case SRFSurfboardPanelFeature:
+                cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SRFSurfboardFeaturePanelCell" forIndexPath:indexPath];
+                ((SRFSurfboardSubtitlePanelCell *)cell).panel = panel;
+            default:
+                break;
+        }
         
         [self _prepareButtonsInCell:cell atIndexPath:indexPath];
         
@@ -239,52 +267,48 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     
     NSInteger buttonIndex = 0;
     
-    if ([panelCell isKindOfClass:[SRFSurfboardPanelCell class]])
+    for (UIView *view in panelCell.contentView.subviews)
     {
-        for (UIView *view in panelCell.contentView.subviews)
+        
+        /**
+         *  For each button, set the tag, then increment.
+         */
+        
+        if ([view isKindOfClass:[UIButton class]])
         {
-            
             /**
-             *  For each button, set the tag, then increment.
+             *  Grab the button.
              */
             
-            if ([view isKindOfClass:[UIButton class]])
+            UIButton *button = (UIButton *)view;
+            
+            if([button respondsToSelector:@selector(setIndexPath:)])
             {
                 /**
-                 *  Grab the button.
+                 *  The indexPath is added in class extension defined in the UIButton_Surfboard.h header.
+                 *  Here we set the indexPath based on the panel and the index.
                  */
                 
-                UIButton *button = (UIButton *)view;
+                button.indexPath = [NSIndexPath indexPathForRow:buttonIndex inSection:indexPath.row];
                 
-                if([button respondsToSelector:@selector(setIndexPath:)])
-                {
-                    /**
-                     *  The indexPath is added in class extension defined in the UIButton_Surfboard.h header.
-                     *  Here we set the indexPath based on the panel and the index.
-                     */
-                    
-                    button.indexPath = [NSIndexPath indexPathForRow:buttonIndex inSection:indexPath.row];
-                    
-                    /**
-                     *  Increment the buttonIndex.
-                     */
-                    
-                    buttonIndex++;
-                    
-                    /**
-                     *  Remove any old wiring from the button and wire it up again.
-                     */
-                    
-                    [button removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
-                    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-                }
-                else
-                {
-                    NSLog(@"(SRFSurfboardViewController) : Failed to load UIButton extension. Buttons will not work.");
-                }
+                /**
+                 *  Increment the buttonIndex.
+                 */
+                
+                buttonIndex++;
+                
+                /**
+                 *  Remove any old wiring from the button and wire it up again.
+                 */
+                
+                [button removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+                [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            else
+            {
+                NSLog(@"(SRFSurfboardViewController) : Failed to load UIButton extension. Buttons will not work.");
             }
         }
-        
     }
 }
 #pragma mark - UICollectionViewDelegateFlowLayout

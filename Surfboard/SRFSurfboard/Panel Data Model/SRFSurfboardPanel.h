@@ -9,21 +9,32 @@
 #import <UIKit/UIKit.h>
 
 /**
- *  A panel type enum - for future use.
+ *  A panel type enum
  */
-
-NS_ENUM(NSInteger, SRFSurfboardPanelType)
-{
-    SRFSurfboardPanelDefault = 0    // A panel with a block of text at the top, an image, and an optional button.
-};
+typedef enum : NSUInteger {
+    SRFSurfboardPanelDefault,
+    SRFSurfboardPanelSubtitle,
+    SRFSurfboardPanelFeature
+} SRFSurfboardPanelType;
 
 @interface SRFSurfboardPanel : NSObject
+
+/**
+ * Panel type
+ */
+@property (nonatomic, assign) SRFSurfboardPanelType type;
 
 /**
  *  The text to display in the panel.
  */
 
 @property (nonatomic, strong) NSString *text;
+
+/**
+ *  The subtitle to display in the panel.
+ */
+
+@property (nonatomic, strong) NSString *subtitle;
 
 /**
  *  An image to load into the panel.
