@@ -2,6 +2,7 @@
  {
  "text" : "Welcome to Surfboard.",
  "image" : "swipe",
+ "show-device" : true
  },
  {
  "text" : "Surfboard makes it delightfully easy to craft onboarding experiences.",
@@ -10,6 +11,7 @@
  {
  "text" : "You provide an array of panels and Surfboard figures out the rest.",
  "image" : "panels",
+ "show-device" : true
  },
  {
  "text" : "See the documentation on GitHub for more information.",
