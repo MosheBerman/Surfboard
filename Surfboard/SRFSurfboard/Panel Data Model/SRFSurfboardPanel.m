@@ -10,12 +10,7 @@
 
 @implementation SRFSurfboardPanel
 
-#pragma mark - Initializers
-
-/** ---
- *  @name Initializers
- *  ---
- */
+// MARK: - Initializers
 
 /**
  *  Creates a panel with the configuration.
