@@ -547,7 +547,6 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (void)_positionPageControl
 {
-    
     if (![self.collectionView.subviews containsObject:self.pageControl])
     {
         
@@ -661,17 +660,14 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     return visibleRect;
 }
 
-#pragma mark - Button Delegate
+// MARK: - Button Delegate
 
-/** ---
- *  @name Button Delegate
- *  ---
- */
 
 /**
- *  Called when a button is tapped.
- */
+ Called when a button is tapped.
 
+ @param button The button that was tapped.
+ */
 - (void)buttonTapped:(UIButton *)button
 {
     if ([self.delegate respondsToSelector:@selector(surfboard:didTapButtonAtIndexPath:)])
