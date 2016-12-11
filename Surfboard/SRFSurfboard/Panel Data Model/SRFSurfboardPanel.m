@@ -33,12 +33,20 @@
         _text = configuration[@"text"];
         _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         
-        _showsDevice = configuration[@"show-device"];
+        BOOL isScreenshot = [configuration.allKeys containsObject:@"screen"];
         
-        if ([configuration.allKeys containsObject:@"screen"])
+        if (isScreenshot)
         {
             _image = [UIImage imageNamed:configuration[@"screen"]];
-            _showsDevice = YES;
+        }
+        
+        if ([configuration.allKeys containsObject:@"show-device"])
+        {
+            _showsDevice = [configuration[@"show-device"] boolValue];
+        }
+        else
+        {
+            _showsDevice = isScreenshot;
         }
         
         _buttonTitle = configuration[@"button"];
