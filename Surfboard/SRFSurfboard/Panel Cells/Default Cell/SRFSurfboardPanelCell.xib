@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,22 +21,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-PG-0ND">
-                        <rect key="frame" x="55" y="125" width="200" height="384"/>
+                        <rect key="frame" x="60" y="125" width="190" height="364"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ePr-PG-0ND" secondAttribute="height" multiplier="25:48" id="Y9u-gb-GrX"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wiU-3x-Gg0">
-                        <rect key="frame" x="84" y="192" width="142" height="250"/>
+                        <rect key="frame" x="89" y="191" width="132" height="232"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="wiU-3x-Gg0" secondAttribute="height" multiplier="14:24.55" id="Vrc-wk-5ZR"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQh-bK-ego">
-                        <rect key="frame" x="20" y="514" width="280" height="24"/>
+                        <rect key="frame" x="8" y="494" width="304" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="WL1-fp-DTI"/>
+                        </constraints>
                         <state key="normal" title="Button">
-                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-RP-y9y">
@@ -40,21 +48,17 @@
                             <constraint firstAttribute="height" constant="100" id="3p3-f8-3ND"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                <nil key="simulatedStatusBarMetrics"/>
-                <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             </view>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SQh-bK-ego" firstAttribute="top" secondItem="ePr-PG-0ND" secondAttribute="bottom" constant="5" id="1u3-eT-nET"/>
                 <constraint firstItem="ePr-PG-0ND" firstAttribute="top" secondItem="dMc-RP-y9y" secondAttribute="bottom" constant="5" id="6NZ-bs-smW"/>
-                <constraint firstAttribute="bottom" secondItem="ePr-PG-0ND" secondAttribute="bottom" constant="39" id="At9-UA-TFc"/>
                 <constraint firstItem="ePr-PG-0ND" firstAttribute="centerX" secondItem="wiU-3x-Gg0" secondAttribute="centerX" id="Dff-tm-B86"/>
-                <constraint firstItem="SQh-bK-ego" firstAttribute="leading" secondItem="jFV-8K-XhM" secondAttribute="leading" constant="20" id="FZZ-Oj-ZA0"/>
+                <constraint firstItem="SQh-bK-ego" firstAttribute="leading" secondItem="jFV-8K-XhM" secondAttribute="leadingMargin" id="FZZ-Oj-ZA0"/>
                 <constraint firstAttribute="trailing" secondItem="dMc-RP-y9y" secondAttribute="trailing" constant="15" id="I8x-gF-Rhp"/>
                 <constraint firstAttribute="centerX" secondItem="dMc-RP-y9y" secondAttribute="centerX" id="U8h-oj-Yp6"/>
                 <constraint firstAttribute="centerX" secondItem="ePr-PG-0ND" secondAttribute="centerX" constant="5" id="bYt-wx-GtP"/>
@@ -62,7 +66,7 @@
                 <constraint firstItem="ePr-PG-0ND" firstAttribute="trailing" secondItem="wiU-3x-Gg0" secondAttribute="trailing" constant="29" id="goo-ea-YZi"/>
                 <constraint firstItem="dMc-RP-y9y" firstAttribute="top" secondItem="jFV-8K-XhM" secondAttribute="top" constant="20" id="j8E-Ub-hD3"/>
                 <constraint firstItem="dMc-RP-y9y" firstAttribute="leading" secondItem="jFV-8K-XhM" secondAttribute="leading" constant="15" id="qJX-ip-ubb"/>
-                <constraint firstAttribute="trailing" secondItem="SQh-bK-ego" secondAttribute="trailing" constant="20" id="wjf-h6-hUH"/>
+                <constraint firstAttribute="trailingMargin" secondItem="SQh-bK-ego" secondAttribute="trailing" id="wjf-h6-hUH"/>
                 <constraint firstAttribute="bottom" secondItem="SQh-bK-ego" secondAttribute="bottom" constant="10" id="x73-Na-3Uj"/>
             </constraints>
             <connections>
@@ -80,9 +84,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>
