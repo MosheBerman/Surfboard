@@ -16,8 +16,8 @@
  "image" : "github",
  },
  {
- "text" : "If you like Surfboard give me a shoutout on Twitter.\nI'm @bermaniastudios.",
- "image" : "twitter",
+ "text" : "If you like Surfboard give me a shoutout on Twitter. I'm @bermaniastudios.",
+ "screen" : "twitter",
  "button" : "Thanks for Surfing!"
  }
 ]
