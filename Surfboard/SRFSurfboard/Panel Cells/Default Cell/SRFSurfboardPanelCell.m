@@ -79,7 +79,14 @@
     
     self.textView.textColor = self.tintColor;
     
-    self.deviceImage.image = [self.deviceImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    if(self.panel.showsDevice == YES)
+    {
+        self.deviceImage.image = [self.deviceImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    }
+    else
+    {
+        self.deviceImage.image = nil;
+    }
     
     [self.actionButton setTitleColor:self.tintColor forState:UIControlStateNormal];
 }
