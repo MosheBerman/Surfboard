@@ -67,12 +67,7 @@
 
 - (instancetype)initWithPanels:(NSArray *)panels NS_DESIGNATED_INITIALIZER;
 
-#pragma mark - Setting the Panels After Initializing
-
-/** ---
- *  @name Setting the Panels After Initializing
- *  ---
- */
+// MARK: - Setting the Panels After Initializing
 
 /**
  *  Sets the panels and reloads the surfboard.
@@ -82,12 +77,7 @@
 
 - (void)setPanels:(NSArray *)panels;
 
-#pragma mark - Load Panels from Configuration
-
-/** ---
- *  @name Load Panels From Configuration
- *  ---
- */
+// MARK: - Load Panels from Configuration
 
 /**
  *  Loads panels out from a given path.
@@ -98,5 +88,21 @@
  */
 
 + (NSArray *)panelsFromConfigurationAtPath:(NSString *)path;
+
+// MARK: - Programatic Navigation
+
+/**
+ Slides to the next panel if there is one.
+ 
+ @param animated Determines if the change should be animated or not.
+ */
+- (void)navigateToNextPanelAnimated:(BOOL)animated;
+
+/**
+ Slides to the previous panel if there is one.
+ 
+ @param animated Determines if the change should be animated or not.
+ */
+- (void)navigateToPreviousPanelAnimated:(BOOL)animated;
 
 @end

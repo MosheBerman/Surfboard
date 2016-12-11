@@ -190,12 +190,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     [self _adjustPageControlVisibilityForPanelAtIndex:self.index];
 }
 
-#pragma mark - UICollectionViewDataSource
-
-/** ---
- *  @name UICollectionViewDataSource
- *  ---
- */
+// MARK: - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -222,7 +217,45 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
     return cell;
 }
 
-#pragma mark - Wire Up the Buttons
+
+// MARK: - Programatic Navigation
+
+/**
+ Slides to the next panel if there is one.
+
+ @param animated Determines if the change should be animated or not.
+ */
+- (void)navigateToNextPanelAnimated:(BOOL)animated;
+{
+    if (self.index < self.panels.count - 1)
+    {
+        [self _navigateToIndex:self.index + 1 animated:animated];
+    }
+}
+
+/**
+ Slides to the previous panel if there is one.
+ 
+ @param animated Determines if the change should be animated or not.
+ */
+- (void)navigateToPreviousPanelAnimated:(BOOL)animated;
+{
+    if (self.index > 0 && self.panels.count > 0)
+    {
+        [self _navigateToIndex:self.index - 1 animated:animated];
+    }
+}
+
+- (void)_navigateToIndex:(NSInteger)index animated:(BOOL)animated
+{
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+    
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:(UICollectionViewScrollPositionCenteredVertically |UICollectionViewScrollPositionCenteredHorizontally) animated:animated];
+    
+}
+
+// MARK: - Wire Up the Buttons
 
 - (void)_prepareButtonsInCell:(SRFSurfboardPanelCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
@@ -595,6 +628,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
         view.layer.borderWidth = 1.0f;
     }
 }
+
 #pragma mark - Scrolling Progress
 
 /** ---
