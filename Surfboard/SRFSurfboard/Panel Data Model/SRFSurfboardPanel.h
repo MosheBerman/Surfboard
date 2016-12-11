@@ -26,6 +26,14 @@
 
 @property (nonatomic, strong) UIImage *image;
 
+
+/**
+ Determines if the panel should show the device. 
+ Set automatically based on the presence of "screen"
+ in the configuration dictionary.
+ */
+@property (nonatomic, assign) BOOL showsDevice;
+
 /**
  *  A title for a button.
  *

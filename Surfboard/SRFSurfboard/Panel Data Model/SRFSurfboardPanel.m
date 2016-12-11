@@ -33,9 +33,12 @@
         _text = configuration[@"text"];
         _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         
+        _showsDevice = NO;
+        
         if ([configuration.allKeys containsObject:@"screen"])
         {
             _image = [UIImage imageNamed:configuration[@"screen"]];
+            _showsDevice = YES;
         }
         
         _buttonTitle = configuration[@"button"];
