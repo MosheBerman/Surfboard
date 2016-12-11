@@ -51,12 +51,7 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 @implementation SRFSurfboardViewController
 
-#pragma mark - Initializers
-
-/** ---
- *  @name Initializers
- *  ---
- */
+// MARK: - Initializers
 
 /**
  *  Instantiates a new surfboard with an array of panel objects.
@@ -67,7 +62,6 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 
 - (instancetype)initWithPathToConfiguration:(NSString *)path
 {
-    
     NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
     
     self = [self initWithPanels:panels];
@@ -109,13 +103,19 @@ static NSString *kSurfboardPanelIdentifier = @"com.mosheberman.surfboard-panel";
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [self initWithPanels:nil];
-    
-    if (self)
-    {
-        
-    }
-    
     return self;
+}
+
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout
+{
+    self = [self initWithPanels:nil];
+
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    return [self initWithPanels:nil];
 }
 
 #pragma mark - View Lifecycle
