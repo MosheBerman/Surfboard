@@ -33,7 +33,7 @@
         _text = configuration[@"text"];
         _image = [[UIImage imageNamed:configuration[@"image"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         
-        _showsDevice = NO;
+        _showsDevice = configuration[@"show-device"];
         
         if ([configuration.allKeys containsObject:@"screen"])
         {
