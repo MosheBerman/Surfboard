@@ -112,9 +112,9 @@
 		4635679819A7C65800262061 /* SRFSurfboard */ = {
 			isa = PBXGroup;
 			children = (
+				463567A419A7C65800262061 /* SRFSurfboard.h */,
 				4635679919A7C65800262061 /* Panel Cells */,
 				463567A119A7C65800262061 /* Panel Data Model */,
-				463567A419A7C65800262061 /* SRFSurfboard.h */,
 				463567A519A7C65800262061 /* Surfboard Delegate Protocol */,
 				463567A719A7C65800262061 /* Surfboard View Controller */,
 			);
