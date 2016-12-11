@@ -82,13 +82,6 @@
     self.deviceImage.image = [self.deviceImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
     [self.actionButton setTitleColor:self.tintColor forState:UIControlStateNormal];
-    
-    /**
-     *  Debug borders
-     */
-    
-//    self.contentView.layer.borderColor = [UIColor redColor].CGColor;
-//    self.contentView.layer.borderWidth = 2.0f;
 }
 
 @end
